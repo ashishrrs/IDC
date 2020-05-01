@@ -9,7 +9,7 @@ class Project(models.Model):
     project_lead = models.CharField(max_length = 100, blank = True)
 
     def __str__(self):
-        return self.name
+        return f"{self.name}\n{self.description}\n{self.department}"
 
 
 class Faculties(models.Model):
@@ -19,7 +19,7 @@ class Faculties(models.Model):
     projects = models.ManyToManyField(Project, blank = True, related_name="Faculties")
 
     def __str__(self):
-        return self.name
+        return f"self.name"
 
 
 

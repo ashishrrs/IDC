@@ -1,0 +1,10 @@
+{% extends "Projects/base.html" %}
+{% block content %}
+<ul>  
+    {% for project in projects %}
+        {% for faculty in project.Faculties_set.all %}
+            <li>{{ faculty.name }}</li>  
+        {% endfor %}
+    {% endfor %}
+</ul>
+{% endblock %}
