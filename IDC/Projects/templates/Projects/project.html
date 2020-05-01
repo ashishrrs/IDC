@@ -1,4 +1,12 @@
 {% extends 'Projects/base.html' %}
 {% block content %}
-    {{ project }}
+   <h1> {{ project }} </h1>
+   <h2> Faculty Involved </h1>
+   {%for facultity in faculty%}
+   <li> {{facultity}} </li>
+   {% endfor %}
+   <h3> Students Involved </h3>
+   {%for student in students%}
+   <li> {{student}} </li>
+   {% endfor %}
 {% endblock %}

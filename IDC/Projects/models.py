@@ -19,7 +19,7 @@ class Faculties(models.Model):
     projects = models.ManyToManyField(Project, blank = True, related_name="Faculties")
 
     def __str__(self):
-        return f"self.name"
+        return f"{self.name}"
 
 
 
@@ -30,7 +30,7 @@ class Students(models.Model):
      projects = models.ManyToManyField(Project, blank = True, related_name="Students")
      
      def __str__(self):
-        return self.name 
+        return f"{self.name}" 
 
 
     

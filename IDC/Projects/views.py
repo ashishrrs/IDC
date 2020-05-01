@@ -16,6 +16,8 @@ def project_display(request,key):
     project = Project.objects.get(id = key)
     context = {
         "project": project,
+        "faculty": project.Faculties.all(),
+        "students" : project.Students.all()
     }   
     return render(request,"Projects/project.html",context) 
 
