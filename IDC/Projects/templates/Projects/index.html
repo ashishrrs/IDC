@@ -2,9 +2,8 @@
 {% block content %}
 <ul>  
     {% for project in projects %}
-        {% for faculty in project.Faculties_set.all %}
-            <li>{{ faculty.name }}</li>  
-        {% endfor %}
+            <a href="/projects/{{ project.id }}/">{{ project.name }}</a> 
+            <p>{{ project.description }}</p> 
     {% endfor %}
 </ul>
 {% endblock %}
