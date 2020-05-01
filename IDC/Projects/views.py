@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
+from .forms import *
+
 
 # Create your views here.
 def index(request):
@@ -16,4 +18,19 @@ def project_display(request,key):
         "project": project,
     }   
     return render(request,"Projects/project.html",context) 
+
+
+def project_add(request):
+    form = ProjectForm()
+    if request.method == 'POST':
+        form = ProjectForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+    context = {
+        "form": form
+    }
+    return render(request,"Projects/addProject.html", context)
+
 
