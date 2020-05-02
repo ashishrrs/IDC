@@ -37,7 +37,7 @@ class Students(models.Model):
 class Image(models.Model):
     image = models.ImageField()
 
-    projects = models.ManyToManyField(Project, blank = True, related_name="Image", onDelete = 'CASCADE')
+    projects = models.ManyToManyField(Project, blank = True, related_name="Image")
 
     
     
