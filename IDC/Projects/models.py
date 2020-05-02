@@ -35,10 +35,11 @@ class Students(models.Model):
 
     
 class Image(models.Model):
-    image = models.ImageField("static")
+    image = models.ImageField()
 
-    projects = models.ManyToManyField(Project, blank = True, related_name="Image")
+    projects = models.ManyToManyField(Project, blank = True, related_name="Image", onDelete = 'CASCADE')
 
+    
     
 
 class Sponsor(models.Model):
