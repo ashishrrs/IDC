@@ -1,3 +1,4 @@
+{% load static %}
 {% extends "Projects/base.html" %}
 {% block content %}
 <div class="container">
@@ -5,7 +6,7 @@
 			<div class="card-columns">
 				{% for project in projects %}
 					<div class="card">
-						<img class="card-img-top" src={{project.Image.first}} alt="Card image">
+						<img class="card-img-top" src='{% static "defaultProject.jpeg" %}' alt="Card image">
 						<div class="card-body text-center">
 							<div class="card-title text-center">{{project.name}}</div>
 							<p class="card-text" >{{project.description}}</p>
