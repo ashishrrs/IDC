@@ -1,0 +1,43 @@
+.card-columns{
+    column-count: 2;
+    column-gap: 2.5vw;
+    column-width: 150 px;
+    padding-inline-start: 350px;
+    padding-inline-end: 350px;
+    margin-left: ;
+}
+
+.maincontainer{
+    position: relative;
+    width: 20vw;
+    height: 20vh;
+}
+
+.thecard{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+
+.thecard:hover{
+    transform: rotateY(180deg)
+}
+
+.thefront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: ;
+}
+
+.theback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: ;
+    transform: rotateY(180deg) ;
+}

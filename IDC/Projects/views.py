@@ -5,8 +5,6 @@ from .forms import *
 
 # Create your views here.
 def index(request):
-    p = Project.objects.first()
-    print(p.displayImage.url)
     projects = Project.objects.all() 
     context = {
         "projects": projects,

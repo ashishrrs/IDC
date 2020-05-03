@@ -2,6 +2,10 @@
 {% load static %}
 {% block content %}
 
+<html>
+	<head>
+		<link rel="stylesheet" href='{% static "css/projectindexstyle.css" %}'>
+	</head>
 <!--start image slider-->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="4000">
 	<ol class="carousel-indicators">
@@ -21,35 +25,30 @@
 <div class="jumbotron text-center">
 	<h1>Projects</h1>
 	<img src="static/images/underline.png" alt="underline" style="width: 20vw;"/>
-
+</div>
 <!--projects section-->
-<div id="projects" class="container-fluid mt-5">
-	<div class="row padding">
-
-		<div class="col-md-6">
-			<div class="card text-center">
-				<img class="card-img-top" src="static/images/project_slide3.jpeg">
-				<div class="card-body">
-					<h4>Project Name</h4>
-					<button type="button" class="btn btn-light">Visit Page</button>
-				</div>
+<div class="card-columns">
+	<div class="maincontainer">
+		{% for project in projects%}
+			<div class="thecard">
+					<div class="card border-dark mb-4">
+						<div class="thefront">
+							<div style="background-image: url(static/images/project_slide3.jpg); width: 100%; height: 40%;"></div>
+								<div class="card-body">
+									<h4 class="card-title">{{project.name}}</h4>
+								</div>
+						</div>
+						<div class="theback">
+							{{project.description}}
+						</div>
+					</div>
 			</div>
-		</div>
-
-		<div class="col-md-6">
-			<div class="card text-center">
-				<img class="card-img-top" src="static/images/project_slide3.jpeg">
-				<div class="card-body">
-					<h4>Project Name</h4>
-					<button type="button" class="btn btn-light">Visit Page</button>
-				</div>
-			</div>
-		</div>
-		
+		{% endfor %}
 	</div>
 </div>
 <!--end projects section-->
-</div>
 <!--end jumbotron-->
 
 {% endblock %}
+
+</html>
