@@ -22,18 +22,18 @@
 <!--end image slider-->
 
 <!--jumbotron"Project"-->
-<div class="jumbotron text-center" style="background-color: #5f5f5f;">
-	<h1>Projects</h1>
+<div class="jumbotron text-center" style="background-color: #0d0d0d; color: #000000">
+	<h1 style="color: #ffffff">Projects</h1>
 	<img src="static/images/underline.png" alt="underline" style="width: 20vw;"/>
 
 <!--projects section-->
 <div class="card-columns">
-	<div class="maincontainer">
 		{% for project in projects%}
+		<div class="maincontainer">
 			<div class="thecard">
-					<div class="card border-dark mb-4">
+					<div class="card border-dark mb-5">
 						<div class="thefront">
-							<img class="card-img-top" src="static/images/project_slide3.jpeg">
+							<img class="card-img-top" src="static/images/project_slide1.jpg">
 							<div class="card-body">
 								<h4 class="card-title">{{project.name}}</h4>
 							</div>
@@ -45,8 +45,8 @@
 						</div>
 					</div>
 			</div>
+		</div>
 		{% endfor %}
-	</div>
 </div>
 <!--end projects section-->
 </div>

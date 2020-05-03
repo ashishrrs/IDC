@@ -1,9 +1,8 @@
 .card-columns{
     column-count: 2;
     column-gap: 2.5vw;
-    column-width: 150 px;
-    padding-inline-start: 350px;
-    padding-inline-end: 350px;
+    padding-inline-start: 400px;
+    padding-inline-end: 400px;
 }
 
 .maincontainer{
