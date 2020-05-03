@@ -5,6 +5,7 @@ class Project(models.Model):
     name = models.CharField(max_length = 100, null = False)
     description = models.TextField()
     department = models.CharField(max_length = 100)
+    displayImage = models.ImageField(default = "static/images/defaultProject.jpeg")
 
     project_lead = models.CharField(max_length = 100, blank = True)
 
