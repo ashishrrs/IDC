@@ -9,7 +9,7 @@
 						<div class="card-body text-center">
 							<div class="card-title text-center">{{project.name}}</div>
 							<p class="card-text" >{{project.description}}</p>
-							<a href="#" class="btn btn-primary stretched-link">Explore</a>
+							<a href='{% url "project_display" %}' class="btn btn-primary stretched-link">Explore</a>
 						</div>
 					</div>
 				{% endfor %}
