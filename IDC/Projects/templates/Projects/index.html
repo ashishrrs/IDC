@@ -1,15 +1,19 @@
 {% extends "Projects/base.html" %}
 {% block content %}
-<div class="container w-100">
-    <ul>  
-        {% for project in projects %}
-        <div style="background-color: black;color: white;width: 100%;">
-                <a style="color: white;text-decoration: none" href="/projects/{{ project.id }}/">{{ project.name }}</a> 
-                <p>{{ project.description }}</p> 
-        </div>
-        <div style="background-color: mintcream;"></div>
-        {% endfor %}
-    </ul>
+<div class="container">
+		<div style="color: black;">
+			<div class="card-columns">
+				{% for project in projects %}
+					<div class="card">
+						<img class="card-img-top" src={{project.Image.first}} alt="Card image">
+						<div class="card-body text-center">
+							<div class="card-title text-center">{{project.name}}</div>
+							<p class="card-text" >{{project.description}}</p>
+							<a href="#" class="btn btn-primary stretched-link">Explore</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
 </div>
 {% endblock %}
- 
