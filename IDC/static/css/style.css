@@ -24,8 +24,15 @@ body{
 .carousel-item{
     height: 100vh;
 }
+.carousel-item .active{
+    width: 100vw;
+}
+.carousel-inner{
+    width: 100vw;
+}
 
 /* project cards*/
+   
 #projects{
     padding: 30 px;
 }
