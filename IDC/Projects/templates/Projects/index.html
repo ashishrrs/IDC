@@ -1,20 +1,47 @@
 {% extends "Projects/base.html" %}
 {% load static %}
 {% block content %}
-<div class="container">
-		<div style="color: black;">
-			<div class="card-columns">
-				{% for project in projects %}
-					<div class="card">
-						<img class="card-img-top" src="{{ project.displayImage.url }}" alt="Card image"/>
-						<div class="card-body text-center">
-							<div class="card-title text-center">{{project.name}}</div>
-							<p class="card-text" >{{project.description}}</p>
-							<a href='{% url "project_display" %}' class="btn btn-primary stretched-link">Explore</a>
-						</div>
-					</div>
-				{% endfor %}
+
+<!--start image slider-->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="6000">
+	<ol class="carousel-indicators">
+		<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+		<li data-target="#carouselExampleControls" data-slide-to="1"></li>
+		<li data-target="#carouselExampleControls" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner" role="listbox">
+		<div class="carousel-item active" style="background-image: url(static/images/project_slide1.jpg);;"></div>
+		<div class="carousel-item" style="background-image: url(static/images/project_slide2.jpg);"></div>
+		<div class="carousel-item" style="background-image: url(static/images/project_slide3.jpeg);background-size: cover	"></div>
+	</div>
+</div>
+<!--end image slider-->
+
+<!--projects section-->
+<div id="projects" class="container-fluid">
+	<div class="row padding">
+
+		<div class="col-md-6">
+			<div class="card text-center">
+				<img class="card-img-top" src="static/images/project_slide3.jpeg">
+				<div class="card-body">
+					<h4>Project Name</h4>
+					<button type="button" class="btn btn-light">Visit Page</button>
+				</div>
 			</div>
 		</div>
+
+		<div class="col-md-6">
+			<div class="card text-center">
+				<img class="card-img-top" src="static/images/project_slide3.jpeg">
+				<div class="card-body">
+					<h4>Project Name</h4>
+					<button type="button" class="btn btn-light">Visit Page</button>
+				</div>
+			</div>
+		</div>
+		
+	</div>
 </div>
+<!--end projects section-->
 {% endblock %}
