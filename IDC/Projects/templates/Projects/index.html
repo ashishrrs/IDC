@@ -3,7 +3,7 @@
 {% block content %}
 
 <!--start image slider-->
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="6000">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="4000">
 	<ol class="carousel-indicators">
 		<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
 		<li data-target="#carouselExampleControls" data-slide-to="1"></li>
@@ -17,8 +17,13 @@
 </div>
 <!--end image slider-->
 
+<!--jumbotron"Project"-->
+<div class="jumbotron text-center">
+	<h1>Projects</h1>
+	<img src="static/images/underline.png" alt="underline" style="width: 20vw;"/>
+
 <!--projects section-->
-<div id="projects" class="container-fluid">
+<div id="projects" class="container-fluid mt-5">
 	<div class="row padding">
 
 		<div class="col-md-6">
@@ -44,4 +49,7 @@
 	</div>
 </div>
 <!--end projects section-->
+</div>
+<!--end jumbotron-->
+
 {% endblock %}
