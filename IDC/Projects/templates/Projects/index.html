@@ -29,7 +29,7 @@
 
 <!--jumbotron"Project"-->
 <div class="jumbotron text-center" style="background-color: #cccccc; color: #000000">
-	<img src="static/images/overline.png" alt="overline" style="width: 200px; height: 8px;"/>
+	<img src="static/images/aboveline.png" alt="overline" style="width: 20vw;"/>
 	<h1 style="color: #000000">Projects</h1>
 	<img src="static/images/underline.png" alt="underline" style="width: 20vw;"/>
 </div>
@@ -48,6 +48,7 @@
 	{% endif %}
 		<div class="col-lg-2"></div>
 		<div class="col-lg-3">
+		<div class="card-container">
 			<div class="card">
 				<div class="thefront">
 					<img src="static/images/project_slide1.jpg" style="width: 100%;" class="card-img-top" alt="...">
@@ -63,6 +64,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 		{% if forloop.counter|divisibleby:2 %}
 		<div class="col-lg-2"></div>
