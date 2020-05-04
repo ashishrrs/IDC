@@ -3,5 +3,5 @@ from . import views
 from django.contrib import admin
 
 urlpatterns = [
-    path("forum/", views.index)
+    path("forum/", views.index, name= "index")
 ]

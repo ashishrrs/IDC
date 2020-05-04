@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return HttpResponse("<h1>Template and Model under construction<br><br>give suggestions</h1>")
+    return render(request,"Forum/index.html")

@@ -4,12 +4,12 @@ Clubs
 {% endblock %}
 
 {% block content %}
-{%for club in clubs%}
-<div>
-<li> <h1> {{club.name}}   </h1> </li>
-<p> {{club.description}} </p>
-<a href="{%url 'insta_profile' club.insta_id %}">
-Insta page
-</a>
-{% endfor %}
+	{%for club in clubs%}
+	<div>
+	<li> <h1> {{club.name}}   </h1> </li>
+	<p> {{club.description}} </p>
+	<a href="{%url 'insta_profile' club.insta_id %}">
+	Insta page
+	</a>
+	{% endfor %}
 {% endblock %}

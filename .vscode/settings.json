@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\Ethereal Sanctum\\.virtualenvs\\predator-LfGfA7xp\\Scripts\\python.exe"
+    "python.pythonPath": "C:\\Users\\Ethereal Sanctum\\.virtualenvs\\predator-LfGfA7xp\\Scripts\\python.exe",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false
 }
