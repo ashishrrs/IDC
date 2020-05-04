@@ -3,7 +3,7 @@
 {% block content %}
 
 <link rel="stylesheet" href='{% static "css/projectindexstyle.css" %}'>
-
+<div id="page">
 <!--start image slider-->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="4000">
 	<ol class="carousel-indicators">
@@ -12,9 +12,9 @@
 		<li data-target="#carouselExampleControls" data-slide-to="2"></li>
 	</ol>
 	<div class="carousel-inner" role="listbox">
-		<div class="carousel-item active" style="background-image: url(static/images/project_slide1.jpg);background-size: cover;"></div>
-		<div class="carousel-item" style="background-image: url(static/images/project_slide2.jpg);background-size: cover;"></div>
-		<div class="carousel-item" style="background-image: url(static/images/project_slide3.jpeg);background-size: cover;"></div>
+		<div class="carousel-item active" style="background-image: url(static/images/carousel1.jpg);background-size: cover;"></div>
+		<div class="carousel-item" style="background-image: url(static/images/carousel2.jpg);background-size: cover;"></div>
+		<div class="carousel-item" style="background-image: url(static/images/carousel3.jpg);background-size: cover;"></div>
 	</div>
 	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -29,7 +29,7 @@
 
 <!--jumbotron"Project"-->
 <div class="jumbotron text-center" style="background-color: #000000; color: #000000">
-	<img src="static/images/over-line.png" class="mx-auto d-block" alt="overline" style="width: 20vw;"/>
+	<img src="static/images/over-line.png" class="mx-auto d-block" alt="overline" style="width: 20vw; padding: 10px;"/>
 	<h1 style="color: #ffffff">Projects</h1>
 	<img src="static/images/under-line.png" class="mx-auto d-block" alt="underline" style="width: 20vw;"/>
 
@@ -81,6 +81,7 @@
 
 </div>
  <!--end jumbotron-->
+</div>
 
 {% endblock %}
 
