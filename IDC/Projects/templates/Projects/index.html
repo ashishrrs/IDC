@@ -40,8 +40,10 @@
 	{% if not forloop.counter|divisibleby:2 %}
 		{% if forloop.counter0|divisibleby:4 %}
 		<div class="row" style="background-color: #000000;">
+		<div class="col-lg-12"><img src="static/images/overline.png"></div>
 		{% else %}
 		<div class="row" style="background-color: #ffffff;">
+		<div class="col-lg-12"><img class="mx-auto" src="static/images/overline.png"></div>
 		{% endif %}
 	{% endif %}
 		<div class="col-lg-2"></div>
