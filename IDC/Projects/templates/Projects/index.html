@@ -28,51 +28,58 @@
 <!--end image slider-->
 
 <!--jumbotron"Project"-->
-<div class="jumbotron text-center" style="background-color: #cccccc; color: #000000">
-	<img src="static/images/overline.png" alt="overline" style="width: 200px; height: 8px;"/>
-	<h1 style="color: #000000">Projects</h1>
-	<img src="static/images/underline.png" alt="underline" style="width: 20vw;"/>
-</div>
+<div class="jumbotron text-center" style="background-color: #000000; color: #000000">
+	<img src="static/images/over-line.png" class="mx-auto d-block" alt="overline" style="width: 20vw;"/>
+	<h1 style="color: #ffffff">Projects</h1>
+	<img src="static/images/under-line.png" class="mx-auto d-block" alt="underline" style="width: 20vw;"/>
+
 <!--projects section-->
 
 
-{% for project in projects %}
-	{% if not forloop.counter|divisibleby:2 %}
-		{% if forloop.counter0|divisibleby:4 %}
-		<div class="row" style="background-color: #000000;">
-		{% else %}
-		<div class="row" style="background-color: #ffffff;">
+	{% for project in projects %}
+		{% if not forloop.counter|divisibleby:2 %}
+			{% if forloop.counter0|divisibleby:4 %}
+			<div class="row" style="background-color: #000000;">
+			<div class="col-lg-12"><img src="static/images/linewhite.png"></div>
+			{% else %}
+			<div class="row" style="background-color: #ffffff;">
+			<div class="col-lg-12"><img class="mx-auto" src="static/images/lineblack.png"></div>
+			{% endif %}
 		{% endif %}
-	{% endif %}
-		<div class="col-lg-2"></div>
-		<div class="col-lg-3">
-			<div class="card">
-				<div class="thefront">
-					<img src="static/images/project_slide1.jpg" style="width: 100%;" class="card-img-top" alt="...">
-					<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
-				<div class="card-img-overlay">
-					<div class="theback">
-							<p>{{project.description}}</p>
+			<div class="col-lg-2"></div>
+			<div class="col-lg-3">
+				<div class="card-container">
+					<div class="card">
+						<div class="thefront">
+							<img src="static/images/project_slide1.jpg" style="width: 100%;" class="card-img-top" alt="...">
+							<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+							</div>
+						</div>
+						<div class="card-img-overlay">
+							<div class="theback">
+									<p>{{project.description}}</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		{% if forloop.counter|divisibleby:2 %}
-		<div class="col-lg-2"></div>
-		</div>
-		{% endif %}
+			{% if forloop.counter|divisibleby:2 %}
+			<div class="col-lg-2"></div>
+			{% if forloop.counter|divisibleby:4 %}
+			<div class="col-lg-12"><img src="static/images/fulllineblack.png"></div>
+			{% else %}
+			<div class="col-lg-12"><img src="static/images/fulllinewhite.png"></div>
+			{% endif %}	
+			</div>
+			{% endif %}
+	{% endfor %}
+	<!--end projects section-->
+			</div>
 
-
-{% endfor %}
-
-<!--end projects section-->
-
-
+</div>
  <!--end jumbotron-->
 
 {% endblock %}
