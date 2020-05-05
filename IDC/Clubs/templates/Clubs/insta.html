@@ -6,21 +6,25 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{{ instagram_profile_name|capfirst }} Instagram feed</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>{{ instagram_profile_name|capfirst }} Instagram Feed</h1>
-<div id="django_recent_media_wall">
-	{% instagram_user_recent_media instagram_profile_name %}
-	{% for media in recent_media %}
-		<div class="django_instagram_media_wall_item">
-			<a href="//instagram.com/p/{{ media.shortcode }}" target="_blank">
-				<img src="{{ media.thumbnail_src}}"/>
-				<span>{{ media.edge_media_to_caption.edges.0.node.text }}</span>
-			</a>
-		</div>
-	{% endfor %}
+	<div class="container" style="text-align: center">
+		<h1>{{ instagram_profile_name|capfirst }} Instagram Feed</h1>
+		<div id="django_recent_media_wall" style="display: inline-block;">
+			{% instagram_user_recent_media instagram_profile_name %}
+			{% for media in recent_media %}
+				<div class="django_instagram_media_wall_item">
+					<a href="//instagram.com/p/{{ media.shortcode }}" target="_blank">
+						<img src="{{ media.thumbnail_src}}"/>
+						<span>{{ media.edge_media_to_caption.edges.0.node.text }}</span>
+					</a>
+				</div>
+			{% endfor %}
 
-</div>
-<p>Got from instagram</p>
+		</div>
+		<p>Got from instagram</p>
+	</div>
 </body>
 </html>
