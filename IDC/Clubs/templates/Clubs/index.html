@@ -1,16 +1,52 @@
-{%extends "Clubs/base.html"%}
-{%block title%}
+{% extends "Clubs/base.html" %}
+{% load static %}
+{% block title %}
 Clubs
 {% endblock %}
-<div id="page">
-	{% block content %}
-		{%for club in clubs%}
-		<div>
-		<li> <h1> {{club.name}} </h1> </li>
-		<p> {{club.description}} </p>
-		<a href="{%url 'insta_profile' club.insta_id %}">
-		Insta page
-		</a>
-		{% endfor %}
-	{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href='{% static "css/clubsindexstyle.css" %}'>
+<div id="page"	style="background-image: linear-gradient(to right, #4568DC, #B06AB3); padding-top: 56px;"">
+<!-- DEMO 4 -->
+<div class="py-5">
+	<h3 class="font-weight-bold mb-0">Explore the CLUBS</h3>
+	<p class="font-italic text-muted mb-4">Be a part of the clubs of IIITDM.</p>
+
+	{%for club in clubs%}
+	<div class="row">
+	  <!-- DEMO 4 Item-->
+	  <div class="col-lg-6 mb-3 mb-lg-0">
+		<div class="hover hover-4 text-white rounded"><img src="..." alt="Club Image">
+		  <div class="hover-overlay"></div>
+		  <div class="hover-4-content">
+			<h3 class="hover-4-title text-uppercase font-weight-bold mb-0"><span class="font-weight-light">{{club.name}} </span>Club</h3>
+			<p class="hover-4-description text-uppercase mb-0 small">
+				{{club.description}}
+				<a href="{%url 'insta_profile' club.insta_id %}">
+					Insta page
+				</a>
+			</p>
+		  </div>
+		</div>
+	  </div>
+	  <!-- DEMO 4 Item            -->
+	  <div class="col-lg-6">
+		<div class="hover hover-4 text-white rounded"><img src="..." alt="Club Image">
+		  <div class="hover-overlay"></div>
+		  <div class="hover-4-content">
+			<h3 class="hover-4-title text-uppercase font-weight-bold mb-0"><span class="font-weight-light">{{club.name}} </span>Club</h3>
+			<p class="hover-4-description text-uppercase mb-0 small">
+				{{club.description}}</br>
+				<a href="{%url 'insta_profile' club.insta_id %}">
+					Insta page
+				</a>
+			</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	{% endfor %}
+  </div>
 </div>
+
+{% endblock %}
