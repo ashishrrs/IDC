@@ -1,6 +1,6 @@
 {%extends "Forum/base.html"%}
 {%block title%}
-Clubs
+Forum
 {% endblock %}
 
 {% block content %}
@@ -8,5 +8,10 @@ Clubs
 </div>
 <div>
 	<h1>Welcome to the Forum page.</h1>
+	<form action = "{% url 'index' %}" method= "POST" />
+	{% csrf_token %}
+	{{form}}
+	<input type= submit value = submit>
+	</form>
 </div>
 {% endblock %}
