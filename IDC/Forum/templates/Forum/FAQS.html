@@ -5,16 +5,18 @@
 {% endblock %}
 
 {%block content%}
-{%for faq in faqs%}
-<div>
-<h1> Question </h1>
-<li> {{faq.name}} says {{faq.message}} </li>
-{% if faq.response is not none%}
-<h2> Response </h2>
-<li> {{faq.response}} </li>
-{%else%}
-<h2> No Response Yet </h2>
-{% endif %}
-</div>
-{% endfor %}
+<div class="container" style="background-image: linear-gradient(to right, #00d2ff, #3a7bd5); padding-top: 56px; padding-bottom: 0;">
+	{%for faq in faqs%}
+		<div>
+		<h1> Question </h1>
+		<li> {{faq.name}} says {{faq.message}} </li>
+			{% if faq.response is not none%}
+				<h2> Response </h2>
+				<li> {{faq.response}} </li>
+			{%else%}
+				<h2> No Response Yet </h2>
+			{% endif %}
+		</div>
+	{% endfor %}
 {% endblock %}
+</div>

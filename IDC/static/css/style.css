@@ -26,15 +26,8 @@ html, body{
 #carouselExampleControls{
 	height: 85vh;
 }
-.carousel-item .active{
-    /*width: 99vw;*/
-}
-.carousel-inner{
-    /*width: 99vw;*/
-}
 
 /* project cards*/
-   
 #projects{
     padding: 30 px;
 }

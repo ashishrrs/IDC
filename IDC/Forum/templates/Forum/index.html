@@ -4,14 +4,13 @@
 {% endblock %}
 
 {% block content %}
-<div id="page">
-</div>
-<div>
+<div class="container" style="background-image: linear-gradient(to right, #00d2ff, #3a7bd5); padding-top: 56px; padding-bottom: 0;">
+
 	<h1>Welcome to the Forum page.</h1>
 	<form action = "{% url 'index' %}" method= "POST" />
 	{% csrf_token %}
 	{{form}}
 	<input type= submit value = submit>
 	</form>
-</div>
 {% endblock %}
+</div>
