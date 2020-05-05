@@ -1,4 +1,6 @@
-body{
+html, body{
+	height: 100%;
+	width: 100%;
     font-family: 'Lato', sans-serif;
     color: #ffffff;
 }
@@ -35,9 +37,4 @@ body{
    
 #projects{
     padding: 30 px;
-}
-
-#page{
-	background-color:#9c9c9c;
-	padding-top: 56px;
 }
