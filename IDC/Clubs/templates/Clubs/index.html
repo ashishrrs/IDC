@@ -6,6 +6,7 @@ Clubs
 
 {% block content %}
 <link rel="stylesheet" href='{% static "css/clubsindexstyle.css" %}'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div id="page"	style="background-image: linear-gradient(to right, #8e2de2, #4a00e0); padding-top: 56px;"">
 
 <!--Header-->
@@ -13,7 +14,7 @@ Clubs
 	<!-- Generic info looks good -->
 	<header class="text-center">
 	  <h1 class="display-4 font-weight-bold">CLUBS</h1>
-	  <p class="font-italic text-muted mb-0">Various clubs present in IIITDM</p>
+	  <p class="font-italic mb-0">The club-culture of IIITDM</p>
 	</header>
 
 	<!-- Image Hover Overlay -->
@@ -28,12 +29,11 @@ Clubs
 			<div class="hover hover-4 text-white rounded"><img src="..." alt="Club Image">
 			<div class="hover-overlay"></div>
 			<div class="hover-4-content">
-				<h3 class="hover-4-title text-uppercase font-weight-bold mb-0"><span class="font-weight-light">{{club.name}} </span>Club</h3>
+				<h3 class="hover-4-title text-uppercase font-weight-bold mb-0"><span class="font-weight-light">{{club.name}} </span>○</h3>
 				<p class="hover-4-description text-uppercase mb-0 small">
 					{{club.description}}
-					<a href="{%url 'insta_profile' club.insta_id %}">
-						Insta page
-					</a>
+				</br>
+					<a href="{%url 'insta_profile' club.insta_id %}" class="fa fa-instagram fa-2x"></a>
 				</p>
 			</div>
 			</div>

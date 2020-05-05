@@ -2,13 +2,13 @@
 	padding-bottom: 50px;
 }
 
-.hover {
+.hover{
 	overflow: hidden;
 	position: relative;
 	padding-bottom: 60%;
 }
 
-.hover-overlay {
+.hover-overlay{
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -17,7 +17,7 @@
 	z-index: 90;
 	transition: all 0.4s;
 }
-.hover img {
+.hover img{
 	width: 100%;
 	position: absolute;
 	top: 0;
@@ -25,24 +25,24 @@
 	transition: all 0.3s;
 }
 
-.hover-content {
+.hover-content{
 	position: relative;
 	z-index: 99;
 }
 
-.hover-4 img {
+.hover-4 img{
 	width: 110%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-.hover-4 .hover-overlay {
+.hover-4 .hover-overlay{
 	background: rgba(0, 0, 0, 0.4);
 	z-index: 90;
 }
 
-.hover-4-title {
+.hover-4-title{
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -50,7 +50,7 @@
 	z-index: 99;
 }
 
-.hover-4-description {
+.hover-4-description{
 	position: absolute;
 	top: 2rem;
 	left: 2rem;
@@ -63,26 +63,44 @@
 	transition: all 0.3s;
 }
 
-@media (min-width: 992px) {
-	.hover-4-description {
+@media (min-width: 992px){
+	.hover-4-description{
 	  width: 50%;
 	}
 }
 
-.hover-4:hover img {
+.hover-4:hover img{
 	width: 100%;
 }
 
-.hover-4:hover::after {
+.hover-4:hover::after{
 	opacity: 1;
 	transform: none;
 }
 
-.hover-4:hover .hover-4-description {
+.hover-4:hover .hover-4-description{
 	opacity: 1;
 	transform: none;
 }
 
-.hover-4:hover .hover-overlay {
+.hover-4:hover .hover-overlay{
 	background: rgba(0, 0, 0, 0.8);
+}
+
+/* icon */
+.fa{
+	padding: 10px;
+	font-size: 20px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 25%;
+}
+
+.fa:hover{
+	opacity: 0.7;
+}
+
+.fa-instagram{
+	background: #125688;
+	color: white;
 }
