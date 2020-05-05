@@ -1,6 +1,6 @@
 body{
     font-family: 'Lato', sans-serif;
-    color: #505962;
+    color: #ffffff;
 }
 
 /* navigation bar */
@@ -38,6 +38,6 @@ body{
 }
 
 #page{
-	background-image: linear-gradient(to right, #4568DC, #B06AB3);
+	background-image: linear-gradient(to right, #8e2de2, #4a00e0);
 	padding-top: 56px;
 }

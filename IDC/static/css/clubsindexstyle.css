@@ -1,3 +1,7 @@
+.row{
+	padding-bottom: 50px;
+}
+
 .hover {
 	overflow: hidden;
 	position: relative;
