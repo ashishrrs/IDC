@@ -4,8 +4,9 @@
 
 <link rel="stylesheet" href='{% static "css/projectindexstyle.css" %}'>
 <div id="page">
+
 <!--start image slider-->
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="4000">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
 	<ol class="carousel-indicators">
 		<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
 		<li data-target="#carouselExampleControls" data-slide-to="1"></li>
@@ -29,9 +30,9 @@
 
 <!--jumbotron"Project"-->
 <div class="jumbotron text-center" style="background-color: #000000; color: #000000">
-	<img src="static/images/over-line.png" class="mx-auto d-block" alt="overline" style="width: 20vw; padding: 10px;"/>
-	<h1 style="color: #ffffff">Projects</h1>
-	<img src="static/images/under-line.png" class="mx-auto d-block" alt="underline" style="width: 20vw;"/>
+	<img src="static/images/over-line.png" class="mx-auto d-block" alt="overline" style="width: 15vw;"/>
+	<h1 style="color: #ffffff; margin-bottom: 0px;">Projects</h1>
+	<img src="static/images/under-line.png" class="mx-auto d-block" alt="underline" style="width: 15vw;"/>
 
 <!--projects section-->
 
@@ -43,7 +44,7 @@
 			<div class="col-lg-12"><img src="static/images/linewhite.png"></div>
 			{% else %}
 			<div class="row" style="background-color: #ffffff;">
-			<div class="col-lg-12"><img class="mx-auto" src="static/images/lineblack.png"></div>
+			<div class="col-lg-12"><img class="mx-auto d-block" src="static/images/lineblack.png"></div>
 			{% endif %}
 		{% endif %}
 			<div class="col-lg-2"></div>
@@ -51,11 +52,11 @@
 				<div class="card-container">
 					<div class="card">
 						<div class="thefront">
-							<img src="static/images/project_slide1.jpg" style="width: 100%;" class="card-img-top" alt="...">
+							<img src="static/images/defaultProject.png" class="card-img-top" alt="...">
 							<div class="card-body">
 							<h5 class="card-title">Card title</h5>
 							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
+							<a href="#" class="btn btn-primary">Flip</a>
 							</div>
 						</div>
 						<div class="card-img-overlay">
@@ -71,7 +72,7 @@
 			{% if forloop.counter|divisibleby:4 %}
 			<div class="col-lg-12"><img src="static/images/fulllineblack.png"></div>
 			{% else %}
-			<div class="col-lg-12"><img src="static/images/fulllinewhite.png"></div>
+			<div class="col-lg-12""><img src="static/images/fulllinewhite.png"></div>
 			{% endif %}	
 			</div>
 			{% endif %}
@@ -81,7 +82,6 @@
 
 </div>
  <!--end jumbotron-->
-</div>
 
 {% endblock %}
 

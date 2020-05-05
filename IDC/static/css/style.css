@@ -21,14 +21,14 @@ body{
 }
 
 /* carousel */
-.carousel-item{
-    height: 80vh;
+#carouselExampleControls{
+	height: 85vh;
 }
 .carousel-item .active{
-    width: 100vw;
+    /*width: 99vw;*/
 }
 .carousel-inner{
-    width: 100vw;
+    /*width: 99vw;*/
 }
 
 /* project cards*/
@@ -38,6 +38,6 @@ body{
 }
 
 #page{
-	background-color: #000000;
+	background-color: #cccccc;
 	padding-top: 56px;
 }
