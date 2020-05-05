@@ -1,16 +1,47 @@
-{%extends "Clubs/base.html"%}
-{%block title%}
+{% extends "Clubs/base.html" %}
+{% load static %}
+{% block title %}
 Clubs
 {% endblock %}
-<div id="page">
-	{% block content %}
+
+{% block content %}
+<link rel="stylesheet" href='{% static "css/clubsindexstyle.css" %}'>
+<div id="page"	style="background-image: linear-gradient(to right, #8e2de2, #4a00e0); padding-top: 56px;"">
+
+<!--Header-->
+<div class="container py-5">
+	<!-- Generic info looks good -->
+	<header class="text-center">
+	  <h1 class="display-4 font-weight-bold">CLUBS</h1>
+	  <p class="font-italic text-muted mb-0">Various clubs present in IIITDM</p>
+	</header>
+
+	<!-- Image Hover Overlay -->
+	<div class="py-5">
+		<h3 class="font-weight-bold mb-0" style="color:#ddd">Explore the Clubs</h3>
+		<p class="font-italic mb-4" style="color:#ccc">Be a part of the clubs of IIITDM.</p>
+
 		{%for club in clubs%}
-		<div>
-		<li> <h1> {{club.name}} </h1> </li>
-		<p> {{club.description}} </p>
-		<a href="{%url 'insta_profile' club.insta_id %}">
-		Insta page
-		</a>
+		<div class="row">
+		<!-- Image Item-->
+		<div class="col-lg-12 mb-3 mb-lg-0">
+			<div class="hover hover-4 text-white rounded"><img src="..." alt="Club Image">
+			<div class="hover-overlay"></div>
+			<div class="hover-4-content">
+				<h3 class="hover-4-title text-uppercase font-weight-bold mb-0"><span class="font-weight-light">{{club.name}} </span>Club</h3>
+				<p class="hover-4-description text-uppercase mb-0 small">
+					{{club.description}}
+					<a href="{%url 'insta_profile' club.insta_id %}">
+						Insta page
+					</a>
+				</p>
+			</div>
+			</div>
+		</div>
+		</div>
 		{% endfor %}
-	{% endblock %}
+	</div>
+	</div>
 </div>
+
+{% endblock %}

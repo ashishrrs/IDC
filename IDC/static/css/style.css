@@ -1,6 +1,6 @@
 body{
     font-family: 'Lato', sans-serif;
-    color: #505962;
+    color: #ffffff;
 }
 
 /* navigation bar */
@@ -8,7 +8,7 @@ body{
     text-transform: uppercase;
     font-size: .9rem;
     font-weight: 700;
-    background: rgba(0,0,0, 0.6)!important;
+    background: rgba(0,0,0, 0.8)!important;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -38,6 +38,6 @@ body{
 }
 
 #page{
-	background-color: #cccccc;
+	background-image: linear-gradient(to right, #8e2de2, #4a00e0);
 	padding-top: 56px;
 }
