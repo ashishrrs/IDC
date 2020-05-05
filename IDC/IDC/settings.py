@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'Forum',
     'Clubs',
     'django_instagram',
-    'sorl.thumbnail'
+    'sorl.thumbnail',
+    'FAQs',
 ]
 
 MIDDLEWARE = [
