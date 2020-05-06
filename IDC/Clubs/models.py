@@ -8,6 +8,8 @@ class Club(models.Model):
     jointcore = models.CharField(max_length = 100, blank = True)
     core_email_id= models.EmailField(blank= True)
     insta_id= models.CharField(max_length=100)
+    displayImage = models.ImageField(default="defaultProject.png",upload_to="images/clubs")
+
 
     def __str__(self):
         return self.insta_id
