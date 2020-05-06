@@ -22,6 +22,11 @@ html, body{
 
     color:#cccccc;
 }
+.log{
+    position: relative;
+    left:1390px;
+
+}
 
 /* carousel */
 #carouselExampleControls{
@@ -32,3 +37,23 @@ html, body{
 #projects{
     padding: 30 px;
 }
+
+.logout{
+    background-color:#506cb5;
+    color: white;
+    border-color:black;
+    border-width: thin;
+    padding:5px;
+    font-weight: 500;
+
+}
+
+.logout:hover{
+    background-color:white;
+    color: #663399;
+    border-color:#663399;
+    border-width: thin;
+    font-weight: 600;
+}
+
+

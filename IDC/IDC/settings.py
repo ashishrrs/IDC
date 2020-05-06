@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'Clubs',
     'django_instagram',
     'sorl.thumbnail',
+    'Home',
  ]
 
 MIDDLEWARE = [
