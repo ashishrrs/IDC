@@ -50,8 +50,7 @@ INSTALLED_APPS = [
     'Clubs',
     'django_instagram',
     'sorl.thumbnail',
-    'FAQs',
-]
+ ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -133,10 +132,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
