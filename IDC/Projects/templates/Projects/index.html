@@ -16,9 +16,9 @@
 		<li data-target="#carouselExampleControls" data-slide-to="2"></li>
 	</ol>
 	<div class="carousel-inner" role="listbox">
-		<div class="carousel-item active" style="background-image: url(static/images/1carousel.jpg);background-size: cover;"></div>
-		<div class="carousel-item" style="background-image: url(static/images/2carousel.jpg);background-size: cover;"></div>
-		<div class="carousel-item" style="background-image: url(static/images/3carousel.jpg);background-size: cover;"></div>
+		<div class="carousel-item active" style="background-image: url(static/images/1carousel.jpg); background-size: cover;"></div>
+		<div class="carousel-item" style="background-image: url(static/images/2carousel.jpg); background-size: cover;"></div>
+		<div class="carousel-item" style="background-image: url(static/images/3carousel.jpg); background-size: cover;"></div>
 	</div>
 	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -54,18 +54,27 @@
 			<div class="col-lg-3">
 				<div class="card-container">
 					<div class="card" style="color: #000000;">
+
 						<div class="thefront">
-							<img src="{{project.displayImage.url}}/" class="card-img-top" alt="...">
+							<img src="{{project.displayImage.url}}/" class="card-img-top img-fluid" alt="...">
 							<div class="card-body">
 							<h5 class="card-title" >{{project.name}}</h5>
 							<p class="card-text" >Led by: {{project.project_lead}}<br>{{project.departmment}}</p>
-							<a href="#" class="btn btn-primary">More info</a>
 							</div>
 						</div>
+						
 						<div class="card-img-overlay">
+
 							<div class="theback">
-									<p>{{project.description}}</p>
+									<p>
+										{{project.Sponsor}}
+										</br>
+										{{project.Faculties}}
+										</br>
+										<a href="#" class="btn btn-primary">More info</a>
+									</p>
 							</div>
+
 						</div>
 					</div>
 				</div>
