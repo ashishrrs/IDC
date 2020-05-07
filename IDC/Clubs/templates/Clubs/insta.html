@@ -6,10 +6,121 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{{ instagram_profile_name|capfirst }} Instagram feed</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
+<!-- CSS file was overridden by user agent stylesheet so I created here itself -->
+<style>
+	* 
+	{
+		box-sizing: border-box;
+	}
+	.header
+	{
+		background-color:rgba(222, 231, 228, 0.603);
+	}
+	.user-name 
+	{
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-family: 'Roboto', sans-serif;
+	}
+	.insta-icon
+	{
+		font-size: 60px;
+		text-align: center;
+	}
+	.features
+	{
+		padding: 100px 0;
+	}
+	.feature-img img
+	{
+		width: 100%;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: 0.5s;
+	}
+	.feature-img img:hover
+	{
+		transform: scale(1.1);
+	}
+	.feature-img
+	{
+		position: relative;
+	}
+	.feature-details
+	{
+		padding: 20px;
+		text-align: center;
+	}
+	.feature-box
+	{
+		box-shadow: 0 0 10px 1px rgba(37,73,214,0.18);
+		margin-bottom: 30px;
+	}
+	.captions
+	{
+		min-height: 100px;
+		max-height: 250px;
+		overflow: auto;
+	}
+	.footer
+	{
+		background-color:rgba(222, 231, 228, 0.603);
+		height: 100px;
+	}
+	.copyright
+	{
+		padding: 40px;
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 400;
+		font-size: 24px;
+	}
+</style>
 <body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="insta-icon">
+						<i class="fa fa-instagram" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<h1 class="user-name">{{ instagram_profile_name|capfirst }}</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="features">
+		<div class="container">
+			<div class="row">
+				{% instagram_user_recent_media instagram_profile_name %}
+				{% for media in recent_media %}
+					<div class="col-lg-4 col-md-6 col-xs-12">
+						<div class="feature-box">
+							<div class="feature-img">
+								<img src="{{ media.thumbnail_src}}">
+							</div>
+							<div class="feature-details">
+								<p class="captions">{{ media.edge_media_to_caption.edges.0.node.text }}</p>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<div class="footer">
+		<div class="copyright">
+			<p><i class="fa fa-copyright" aria-hidden="true"></i>2020 Clubs @ IIITDM Kancheepuram</p>
+		</div>
+	</div>
+	<!-- 
 	<div class="container" style="text-align: center">
 		<h1>{{ instagram_profile_name|capfirst }} Instagram Feed</h1>
 		<div id="django_recent_media_wall" style="display: inline-block;">
@@ -25,6 +136,6 @@
 
 		</div>
 		<p>Got from instagram</p>
-	</div>
+	</div> -->
 </body>
 </html>

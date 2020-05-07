@@ -29,6 +29,7 @@ urlpatterns = [
     path('', include('Clubs.urls')),
     path('',include('Forum.urls')),
     path('',include('FAQs.urls')),
+    path('',include('Home.urls')),
 ]
 
 
