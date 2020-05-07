@@ -4,13 +4,20 @@
 {% endblock %}
 
 {% block content %}
-<div class="container" style="background-image: linear-gradient(to right, #00d2ff, #3a7bd5); padding-top: 56px; padding-bottom: 0;">
+<div id="page" style="background-image: linear-gradient(to right, #4a00e0, #ff2800); padding-top: 56px; padding-bottom: 0;">
+	<div class="container">
 
-	<h1>Welcome to the Forum page.</h1>
-	<form action = "{% url 'index' %}" method= "POST" />
-	{% csrf_token %}
-	{{form}}
-	<input type= submit value = submit>
-	</form>
+		<header class="py-5 text-center">
+			<h1 class="display-4 font-weight-bold">FORUM</h1>
+		</header>
+		
+		<div style="height:100vh;">
+			<form action = "{% url 'index' %}" method= "POST" />
+			{% csrf_token %}
+			{{form}}
+			<input type= submit value = submit>
+			</form>
+		</div>
+	</div>
 </div>
 {% endblock %}

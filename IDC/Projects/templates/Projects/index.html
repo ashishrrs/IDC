@@ -32,10 +32,10 @@
 <!--end image slider-->
 
 <!--jumbotron"Project"-->
-<div class="jumbotron text-center" style="background-image: linear-gradient(to right, #000000, #434343, #303335, #000000); color: #000000;">
-	<img src="static/images/over-line.png" class="mx-auto d-block" alt="overline" style="width: 15vw;"/>
-	<h1 style="color: #ffffff; margin-bottom: 0px;">Projects</h1>
-	<img src="static/images/under-line.png" class="mx-auto d-block" alt="underline" style="width: 15vw;"/>
+<div class="jumbotron text-center" style="background-image: linear-gradient(to right, #000000, #434343, #303335, #000000);">
+	<img src="static/images/over-line.png" class="mx-auto d-block" alt="overline" style="width: 22vw;"/>
+	<h1 class="display-4 font-weight-bold">PROJECTS</h1>
+	<img src="static/images/under-line.png" class="mx-auto d-block" alt="underline" style="width: 25vw;"/>
 
 <!--projects section-->
 
@@ -53,12 +53,12 @@
 			<div class="col-lg-2"></div>
 			<div class="col-lg-3">
 				<div class="card-container">
-					<div class="card">
+					<div class="card" style="color: #000000;">
 						<div class="thefront">
 							<img src="{{project.displayImage.url}}/" class="card-img-top" alt="...">
 							<div class="card-body">
-							<h5 class="card-title">{{project.name}}</h5>
-							<p class="card-text">Led by: {{project.project_lead}}<br>{{project.departmment}}</p>
+							<h5 class="card-title" >{{project.name}}</h5>
+							<p class="card-text" >Led by: {{project.project_lead}}<br>{{project.departmment}}</p>
 							<a href="#" class="btn btn-primary">More info</a>
 							</div>
 						</div>
