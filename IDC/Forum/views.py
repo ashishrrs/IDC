@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.core.mail import send_mail
 from .forms import Query
 from .models import queries
@@ -24,14 +24,14 @@ def index(request):
             if(display=='public'):
                 new_query = queries(name= name, email= email, message= message)
                 new_query.save()
-                context= {
-                    'faqs' : queries.objects.all()
-                }
-                return render(request,"Forum/FAQS.html",context )
-            else:
-                return render(request,"Forum/index.html")
-    else:
-        return HttpResponse("Failure")
+            
+            context= {
+                'queries' : queries.objects.all()
+                     }
+            return render(request,"Forum/index.html",context )
+         
+
+
 
        
 
