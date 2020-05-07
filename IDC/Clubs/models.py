@@ -13,8 +13,3 @@ class Club(models.Model):
 
     def __str__(self):
         return self.insta_id
-    
-
-    
-
-
