@@ -4,6 +4,23 @@
 {% endblock %}
 
 {% block content %}
+
+<div>
+		<h1> Current Queries </h1>
+		{%for faq in queries%}
+		<h1> Question </h1>
+		<li> {{faq.name}} says {{faq.message}} </li>
+			{% if faq.response is not none%}
+				<h2> Response </h2>
+				<li> {{faq.response}} </li>
+			{%else%}
+				<h2> No Response Yet </h2>
+			{% endif %}
+		</div>
+	{% endfor %}
+	<div>
+
+
 <div id="page" style="background-image: linear-gradient(to right, #4a00e0, #20BDFF, #9aedbe); padding-top: 56px; padding-bottom: 0;">
 	<div class="container">
 
@@ -12,6 +29,7 @@
 		</header>
 		
 		<div style="height:100vh;">
+	
 			<form action = "{% url 'index' %}" method= "POST" />
 			{% csrf_token %}
 			{{form}}
