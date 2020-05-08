@@ -1,24 +1,12 @@
-.navbar{
-    text-transform: uppercase;
-	font-size: 1rem;
-	font-weight: 700;
-    background: #ff3503;
+.h1, .h2, .h3{
+	color: #ffffff;
 }
-.navbar-dark .navbar-nav .nav-link {
-    color: #999999;
-    padding-left: 1rem;
-}
-.navbar-dark .navbar-nav .nav-link:hover{
 
-    color:#cccccc;
-}
 .log{
 	position: relative;
 	left:1300px;
 
 }
-
-
 .logout{
 	background-color:#506cb5;
 	color: white;
@@ -53,17 +41,9 @@
 	/*font-weight: 600;*/
 }
 
-body{
-	background-color: #f2f2f3;
-	
-	margin-top: 75px;
-	margin-bottom: 75px;
-	margin-left: 50px;
-	margin-left: 50px;
-}
 .forummodule{
 	background-color: white;
-	color: black;
+	color: #000000;
 	overflow:none;
 }
 .forummargin{
@@ -78,12 +58,8 @@ body{
 	font-size: 50px;
 	position: relative;
 	left:430px;
-/*	margin:auto;
-	width:60%;
-	padding: 10px;*/
-
-
 }
+
 .pagnationbar{
 	padding: 20px;
 }
@@ -98,23 +74,7 @@ a:hover{
 	text-decoration: none;
 
 }
-h1{
-	font-size: 1.7em;
-	color:#562e72;
-}
-h2{
-	font-size: 1.5em;
-	color:#562e72;
-}
-h3
-{
-	font-size: 1.3em;
-	color:#562e72;
-}
-h4{
-	font-size: 1.1em;
-	color:#562e72;
-}
+
 .columnpad{
 	margin-top: 15px;
 	margin-left: 5px;
@@ -136,7 +96,6 @@ h4{
 .forumtable{
 	width:100%;
 	height:auto;
-	border: 1px solid #562e72;
 }
 .forumtable td{
 	padding:5px;
@@ -144,18 +103,16 @@ h4{
 }
 .forumtable th{
 	padding:5px;
-	color :#808080;
-	
+	color :#ffffff;
+	background-color: #bfbfbf;
 }
-.forumtable tr{
-	border: 1px solid #f2f2f2;
-	
-}
+
+
 .new_discussion_text{
 	width :100%;
 	height: auto;
-	background color:white;
-	color:#562e72;
+	background color: white;
+	color: #562e72;
 	margin-top: 5px;
 
 }

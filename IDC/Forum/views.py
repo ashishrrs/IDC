@@ -24,19 +24,11 @@ from .models import queries
 #             if(display=='public'):
 #                 new_query = queries(name= name, email= email, message= message)
 #                 new_query.save()
-            
+			
 #             context= {
 #                 'queries' : queries.objects.all()
 #                      }
 #             return render(request,"Forum/index.html",context )
 
 def index(request):
-    return render(request,"Forum/forum.html");
-
-
-
-       
-
-
-
-
+	return render(request,"Forum/index.html");
