@@ -16,17 +16,18 @@
 	
 	<ul class="carousel-indicators">
 		<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-		{% for i in view_name %}
+		<!--{% for i in view_name %}
 		<li data-target="#carouselExampleControls" data-slide-to="i"></li>
+		{% endfor %}-->
 	</ul>
-
-	<div class="carousel-inner">
+		
+	<!--<div class="carousel-inner">
 		{% for i in view_name %}
 			<div class="item">
 				<img src="{{i.carouselImage.url}}" height="70vh" width="100%">
 			</div>
 		{% endfor %}
-	</div>
+	</div>-->
 
 	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -67,10 +68,10 @@
 							<h5 class="card-title">{{project.name}}</h5>
 							<p class="card-text">Led by: {{project.project_lead}}<br>{{project.departmment}}</p>
 							<div class="footer">
-                                <button class="btn btn-simple" onclick="rotateCard(this)">
-                                    <i class="fa fa-mail-forward"></i> Quick View
-                                </button>
-                            </div>
+								<button class="btn btn-simple" onclick="rotateCard(this)">
+									<i class="fa fa-mail-forward"></i> Quick View
+								</button>
+							</div>
 							</div>
 						</div><!--end of the front-->
 						
@@ -109,41 +110,41 @@
 			{% endif %}	
 			</div>
 			{% endif %}
-	{% endfor %}
+
 	<!--end projects section-->
 			</div>
 
+	{% endfor %}
 </div>
- <!--end jumbotron-->
+<!--end jumbotron-->
+
 
 <!-- JS function for card flip-->
 
 <script type="text/javascript">
-    $().ready(function(){
-        $('[rel="tooltip"]').tooltip();
+	$().ready(function(){
+		$('[rel="tooltip"]').tooltip();
 
-        $('a.scroll-down').click(function(e){
-            e.preventDefault();
-            scroll_target = $(this).data('href');
-             $('html, body').animate({
-                 scrollTop: $(scroll_target).offset().top - 60
-             }, 1000);
-        });
+		$('a.scroll-down').click(function(e){
+			e.preventDefault();
+			scroll_target = $(this).data('href');
+			 $('html, body').animate({
+				 scrollTop: $(scroll_target).offset().top - 60
+			 }, 1000);
+		});
 
-    });
+	});
 
-    function rotateCard(btn){
-        var $card = $(btn).closest('.card-container');
-        console.log($card);
-        if($card.hasClass('hover')){
-            $card.removeClass('hover');
-        } else {
-            $card.addClass('hover');
-        }
-    }
+	function rotateCard(btn){
+		var $card = $(btn).closest('.card-container');
+		console.log($card);
+		if($card.hasClass('hover')){
+			$card.removeClass('hover');
+		} else {
+			$card.addClass('hover');
+		}
+	}
 
 
-</script>
-<!-- end function card flip-->
-
+<!--end function card flip-->
 {% endblock %}
