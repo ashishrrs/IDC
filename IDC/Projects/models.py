@@ -1,15 +1,17 @@
 from django.db import models
+from Home.models import *
 
 # Create your models here.
 class Project(models.Model):
-	name = models.CharField(max_length = 100, null = False)
-	description = models.TextField()
-	department = models.CharField(max_length = 100)
-	displayImage = models.ImageField(default = "defaultProject.png",upload_to="images")
-	project_lead = models.CharField(max_length = 100, blank = True)
+    name = models.CharField(max_length = 100, null = False)
+    description = models.TextField()
+    department = models.CharField(max_length = 100)
+    displayImage = models.ImageField(default = "defaultProject.png",upload_to="images")
+    project_lead = models.CharField(max_length = 100, blank = True)
+    upcoming_events = models.ManyToManyField(Events, blank = True, related_name="Project")
 
-	def __str__(self):
-		return self.name
+    def __str__(self):
+		    return self.name
 
 
 class Faculties(models.Model):
