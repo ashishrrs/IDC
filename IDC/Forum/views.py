@@ -29,12 +29,3 @@ def index(request):
                 'queries' : queries.objects.all()
                      }
             return render(request,"Forum/index.html",context )
-         
-
-
-
-       
-
-
-
-
