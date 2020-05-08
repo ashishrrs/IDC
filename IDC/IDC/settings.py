@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django_instagram',
     'sorl.thumbnail',
     'Home',
+    'FAQs',
  ]
 
 MIDDLEWARE = [
