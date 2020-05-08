@@ -7,4 +7,5 @@ admin.site.register(Sponsor)
 admin.site.register(Students)
 admin.site.register(Faculties)
 admin.site.register(Image)
+admin.site.register(carouselimages)
 
