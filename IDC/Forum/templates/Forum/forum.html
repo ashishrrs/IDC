@@ -7,26 +7,27 @@
   <title>forum@DIC</title>
 </head>
 <div class="container">
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-			<a class="navbar-brand" href="#"><img src='{% static "images/logo_DIC.png" %}' alt="Home" style="height: 25px;"></a>
+			<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+
+				<a class="navbar-brand" href="#"><img src='{% static "images/logo_DIC.png" %}' alt="Home" style="height: 25px;"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<div class="navbar-nav mr-auto">
-						<a class="nav-item nav-link" href="/">Projects</a>
-						<a class="nav-item nav-link" href="/clubs/">Clubs</a>
-						<a class="nav-item active nav-link" href="#">Forum</a>
-						<div class="log" text-right>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<div class="navbar-nav">
+							<a class="nav-item nav-link" href="/">Projects</a>
+							<a class="nav-item nav-link" href='/clubs/'>Clubs</a>
+							<a class="nav-item  active nav-link" href="/forms/">Forum</a>
+							<a class="nav-item nav-link" href="#">FAQs</a>
+					</div>
+					<div class="log" text-right>
 						<a class="btn btn primary logout" href="#" >LOGIN</a>
 						</div> 
 				</div>
-			</div>
-		</nav>
-		</div>
 
-<body>
+			</nav>
+		</div>
 	<div class="container ">
 		<div class = "row">
 				<div class="col-lg-12 pagnationbar 
@@ -114,7 +115,6 @@
 
 		</table>
 	</div>
-	<div><a href="/FAQs" class="FAQs" >FAQs</a>
 </div>
 </body>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" type ="text/javascript"></script>
