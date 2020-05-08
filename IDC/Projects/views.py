@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
 from .forms import *
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -34,5 +35,12 @@ def project_add(request):
         "form": form
     }
     return render(request,"Projects/addProject.html", context)
+
+def carousel(request):
+    carouselimg = carouselimages.objects.all()
+    context = {
+        "images": carouselimg ,
+    }
+    return render(request,"Projects/carousel.html",context)
 
 
