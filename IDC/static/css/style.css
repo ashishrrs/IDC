@@ -28,11 +28,6 @@ html, body{
 
 }
 
-/* carousel */
-#carouselExampleControls{
-	height: 85vh;
-}
-
 /* project cards*/
 #projects{
     padding: 30 px;
@@ -55,5 +50,3 @@ html, body{
     border-width: thin;
     font-weight: 600;
 }
-
-
