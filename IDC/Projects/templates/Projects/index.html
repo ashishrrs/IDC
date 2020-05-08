@@ -3,6 +3,7 @@
 {% block title %}
 	Projects
 {% endblock %}
+
 {% block content %}
 
 <link rel="stylesheet" href='{% static "css/projectindexstyle.css" %}'>
@@ -83,9 +84,10 @@
 								<div class="main">
 								<h4 class="text-center">Sponsors and Faculty</h4>
 								<p class="card-text">
-										{{project.Sponsor}}
+										{{project.Sponsor.name}}
+										<img src="{{project.Sponsor.logo.url}}/"
 										</br>
-										{{project.Faculties}}
+										{{project.Faculties.name}}
 								</p>
 										<div class="footer">
 											<button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
@@ -96,7 +98,7 @@
 											</button>
 										</div>
 								</div>
-							</div><!-- end of the back-->
+						</div><!-- end of the back-->
 
 						</div><!-- end card-->
 					</div>
