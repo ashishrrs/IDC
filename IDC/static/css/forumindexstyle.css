@@ -1,3 +1,10 @@
+#page{
+	background-image: linear-gradient(to right, #1488CC, #2B32B2);
+	padding-top: 56px;
+	padding-bottom: 0;
+	height: 100%;
+}
+
 .body{
 	height: 100%
 }

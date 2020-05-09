@@ -1,7 +1,13 @@
-
 *{
 	margin: 0;
 	padding: 0;
+}
+
+#page{
+	background-image: linear-gradient(to right, #F8CDDA, #1D2B64);
+	padding-top: 56px;
+	padding-bottom: 0;
+	height: 100%;
 }
 
 .carousel-inner{
@@ -59,4 +65,9 @@
 	margin-top: 40px;
 	padding-right: 0px;
 	padding-left: 0px;
+}
+
+/* project cards*/
+#projects{
+	padding: 30 px;
 }

@@ -28,11 +28,6 @@ html, body{
 
 }
 
-/* project cards*/
-#projects{
-	padding: 30 px;
-}
-
 .logout{
 	background-color:#506cb5;
 	color: white;

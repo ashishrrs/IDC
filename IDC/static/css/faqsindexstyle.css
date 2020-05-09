@@ -1,9 +1,7 @@
 /* Override bootstrap collapse to keep margins */
-.collapse.in {
-	display: inherit;
-	visibility: visible;
-  }
-  .collapse {
-	display: inherit;
-	visibility: hidden;
-  }
+#page{
+	background-image: linear-gradient(to right, #3CA55C, #B5AC49);
+	padding-top: 56px;
+	padding-bottom: 0;
+	height: 100%;
+}

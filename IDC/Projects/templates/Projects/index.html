@@ -10,7 +10,7 @@
 <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div id="page" style="background-color: #2e2e2e; padding-top: 56px;">
+<div id="page">
 
 <!--start image slider-->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
@@ -42,7 +42,7 @@
 <!--end image slider-->
 
 <!--jumbotron"Project"-->
-<div class="jumbotron text-center" style="background-image: linear-gradient(to right, #F8CDDA, #1D2B64);">
+<div class="jumbotron text-center">
 	<img src="static/images/over-line.png" class="mx-auto d-block" alt="overline" style="width: 22vw;"/>
 	<h1 class="display-4 font-weight-bold">PROJECTS</h1>
 	<img src="static/images/under-line.png" class="mx-auto d-block" alt="underline" style="width: 25vw;"/>
@@ -51,10 +51,10 @@
 	{% for project in projects %}
 		{% if not forloop.counter|divisibleby:2 %}
 			{% if forloop.counter0|divisibleby:4 %}
-			<div class="row" style="background-image: linear-gradient(to right, #F8CDDA, #1D2B64);">
+			<div class="row">
 			<!-- first first line <div class="col-lg-12"><img src="static/images/linewhite.png"></div>  -->
 			{% else %}
-			<div class="row" style="background-image: linear-gradient(to right, #F8CDDA, #1D2B64);">
+			<div class="row">
 			<!-- first last line <div class="col-lg-12"><img class="mx-auto d-block" src="static/images/lineblack.png"></div>  -->
 			{% endif %}
 		{% endif %}
