@@ -19,6 +19,7 @@ class Faculties(models.Model):
 	department = models.CharField(max_length = 100)
 
 	projects = models.ManyToManyField(Project, blank = True, related_name="Faculties")
+	photo= models.ImageField(default= "defaultProject.png",upload_to="images")
 
 	def __str__(self):
 		return f"{self.name}"
@@ -28,6 +29,7 @@ class Faculties(models.Model):
 class Students(models.Model):
 	name = models.CharField(max_length = 100, null = False)
 	roll_no = models.CharField(max_length = 9, null = False)
+	photo= models.ImageField(default="defaultProject.png", upload_to="images")
 
 	projects = models.ManyToManyField(Project, blank = True, related_name="Students")
 	
