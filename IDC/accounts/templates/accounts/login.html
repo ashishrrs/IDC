@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DIC</title>
+</head>
+<body>
+	<h>login </h>
+	<form action="/login/" method="post">
+		{% csrf_token %}
+		{{form}}
+		{%if request.GET.next %}
+			<input type ="hidden" name ="next" value="{{request.GET.next}}">
+		{% endif %}
+		<input type = "submit" valur = "Login">
+	</form>
+</body>
+</html>

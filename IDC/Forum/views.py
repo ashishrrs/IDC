@@ -3,6 +3,7 @@ from django.shortcuts import render,redirect
 from django.core.mail import send_mail
 from .forms import Query
 from .models import queries
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 # def index(request):
@@ -29,6 +30,7 @@ from .models import queries
 #                 'queries' : queries.objects.all()
 #                      }
 #             return render(request,"Forum/index.html",context )
-
+# @login_required(login_url="/login/")
 def index(request):
 	return render(request,"Forum/index.html");
+
