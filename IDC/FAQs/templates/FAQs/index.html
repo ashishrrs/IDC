@@ -7,29 +7,71 @@
 
 {% block content %}
 
-<link rel="stylesheet" href='{% static "css/faqsindexstyle.css" %}'>
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
-<script  src='{% static "js/function.js" %}'></script>
 <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href='{% static "css/faqsindexstyle.css" %}'>
 
 <div id="page">
 
 	<div class="container py-5">
 		<header class="text-center">
-			<h1 class="display-4 font-weight-bold">Frequently Asked Questions</h1>
+			<h1 class="display-4 font-weight-bold" style="color: #ffffff;">Frequently Asked Questions</h1>
 		</header>
 		
 		<div class="py-5">
-			<div class="container text-center">
-				<div class="accordion">
+			<div class="row">
+				<div class="col-lg-9 mx-auto">
+					<!-- Accordion -->
+					<div id="accordion">
 
-					<div class="accordion-item">
-					<a>What can JavaScript Do and cannot do in many cases?</a>
-						<div class="content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+						<div class="card">
+							<div class="card-header">
+								<a class="card-link" data-toggle="collapse" href="#collapseOne">
+									<h6>How to contact the admins?</h6>
+								</a>
+							</div>
+							<div id="collapseOne" class="collapse show" data-parent="#accordion">
+								<div class="card-body">
+									Goto Home/Support for contact information.
+								</div>
+							</div>
 						</div>
-					</div>
 
+						<div class="card">
+							<div class="card-header">
+								<a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+									<h6>Who made this website?</h6>
+								</a>
+							</div>
+							<div id="collapseTwo" class="collapse" data-parent="#accordion">
+								<div class="card-body">
+									<ul>
+										<li>Shah Anwaar Khalid: CED18I048</li>
+										<li>Ashish Choudhary: CED18I061</li>
+										<li>T Karthikeyan: CED18I065</li>
+										<li>Suyash Chaudhary: COE18B054</li>
+										<li>Shubham Karwa: COE18B062</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-header">
+								<a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+									<h6>Is Elon Musk going to name his kid X Æ A-12?</h6>
+								</a>
+							</div>
+							<div id="collapseThree" class="collapse" data-parent="#accordion">
+								<div class="card-body">
+									He already has. None of your concern.
+								</div>
+							</div>
+						</div>
+
+					</div>
 				</div>
 			</div>
 		</div>
