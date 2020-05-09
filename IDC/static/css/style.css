@@ -7,10 +7,10 @@ html, body{
 
 /* navigation bar */
 .navbar{
+	font-family: 'Lato', sans-serif;
 	text-transform: uppercase;
 	font-size: 1rem;
 	font-weight: 700;
-	background: #ff3503;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -25,7 +25,6 @@ html, body{
 .log{
 	position: relative;
 	left:1390px;
-
 }
 
 .logout{
@@ -35,7 +34,6 @@ html, body{
 	border-width: thin;
 	padding:5px;
 	font-weight: 500;
-
 }
 
 .logout:hover{

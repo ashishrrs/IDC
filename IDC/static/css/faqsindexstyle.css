@@ -1,19 +1,27 @@
+a:hover{
+	text-decoration: none;
+}
 
 #page{
-	background-image: linear-gradient(to right, #e65c00, #F9D423);
+	background-image: linear-gradient(to right, #e65c00, #F09819);
 	padding-top: 56px;
 	padding-bottom: 0;
 	height: 100%;
 	font-family: 'Lato', sans-serif;;
 }
 
+.navbar-dark .navbar-nav .nav-link:hover{
+	color:#ffffff;
+}
+
 .card-link{
 	color: #000;
 	text-decoration: none;
 	font-weight: bold;
-
 }
+
 .card-link:hover{
+	text-decoration: none;
 	color: #666666;
 }
 

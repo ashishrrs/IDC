@@ -1,21 +1,33 @@
-{%extends "Forum/base.html"%}
+{% extends "Forum/index.html" %}
+{% load static %}
 {%block title%}
 	Current Query
 {% endblock %}
 
 {%block content%}
-<div class="container text-center" style="color: #000;"
-	<li> {{current_query.name}}  </li>
-	<h1>subject <h1>
-	{{current_query.subject}}
-	<h2> Question </h2>
-	{{current_query.content}}
-	<h3> Responses </h3>
-	{%for reply in responses%}
-	<li> {{reply.response}} {{repy.admin_name}} </li>
-	{%empty%}
-	<li> No response yet </li>
+<link rel="stylesheet"  href='{% static "css/forumindexstyle.css" %}'>
 
-	{% endfor %}
+<div id="page" style="background-image: linear-gradient(to right, #232526, #414345);">
+	<div class="container py-5" style="color: #000; padding-top: 56px;padding-bottom: 100px;">
+		<div class="text-center py-5">
+			<h1 class="display-4" style="color:#fff;">THREAD</h1>
+		</div>
+		
+		<div class="card shadow">
+			<div class="card-body p-5">
+				<div class="container py-3 text-center"><h1>{{current_query.subject}}<h1></h1></div>
+				<h3>{{current_query.name}} had asked:</h3>
+				
+				<p>{{current_query.content}}</p>
+			
+				<h4>Responses:</h4>
+				{%for reply in responses%}
+					<li> {{reply.response}} {{repy.admin_name}} </li>
+					{% empty %}
+					<li> No response yet </li>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 </div>
 {% endblock %}
