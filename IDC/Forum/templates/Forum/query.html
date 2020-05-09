@@ -1,22 +1,21 @@
 {%extends "Forum/base.html"%}
-
 {%block title%}
 	Current Query
 {% endblock %}
 
 {%block content%}
-<div id="text" style="color: #000;"
-			<li> {{current_query.name}}  </li>
-		<h1>subject <h1>
-		{{current_query.subject}}
-		 <h2> Question </h2>
-		 {{current_query.content}}
-			 <h3> Responses </h3>
-			 {%for reply in responses%}
-			   <li> {{reply.response}} {{repy.admin_name}} </li>
-			   {%empty%}
-			   <li> No response yet </li>
-		
+<div class="container text-center" style="color: #000;"
+	<li> {{current_query.name}}  </li>
+	<h1>subject <h1>
+	{{current_query.subject}}
+	<h2> Question </h2>
+	{{current_query.content}}
+	<h3> Responses </h3>
+	{%for reply in responses%}
+	<li> {{reply.response}} {{repy.admin_name}} </li>
+	{%empty%}
+	<li> No response yet </li>
+
 	{% endfor %}
-		</div>
+</div>
 {% endblock %}

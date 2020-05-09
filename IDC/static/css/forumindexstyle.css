@@ -104,6 +104,7 @@ a:hover{
 .forumtable{
 	width:100%;
 	height:auto;
+	color: black;
 }
 .forumtable td{
 	padding:5px;

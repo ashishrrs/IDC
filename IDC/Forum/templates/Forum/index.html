@@ -67,19 +67,20 @@
 						Email
 					</th>
 				</thead>
+
 				{%for query in queries%}
 
-				<tr class ="forummodule">
-					<td>
-						<a href= "/forms/{{query.id}}/">{{query.subject}}</a>
-					</td>
-					<td>
-					  {{query.name}}
-					</td>
-					<td >
-						{{query.email}}
-					</td>
-				</tr>
+					<tr class ="forummodule">
+						<td>
+							<a href= "/forms/{{query.id}}/">{{query.subject}}</a>
+						</td>
+						<td>
+						{{query.name}}
+						</td>
+						<td >
+							{{query.email}}
+						</td>
+					</tr>
               {% endfor %}
 			</table>
 
