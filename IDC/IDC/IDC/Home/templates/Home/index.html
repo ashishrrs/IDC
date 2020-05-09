@@ -1,0 +1,48 @@
+{% extends "Home/base.html" %}
+{% load static %}
+
+{% block title %}
+	Home
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href='{% static "css/homeindexstyle.css" %}'>
+
+
+<div id="page">
+
+	<div class="container-fluid text-center" style="margin-left: 0; background-image: url('static/images/campus.png'); background-size: cover; background-repeat: no-repeat;">
+		<div class="container py-5" style="text-shadow: 1px 1px 8px #000000;">
+			<h1 class="display-1 font-weight-bold text-center">DIC</h1>
+		</div>
+		
+		<h2 style="text-shadow: 2px 2px 8px #000000;">Design & Innovation Center</h2>
+		<h4 style="text-shadow: 2px 2px 8px #000000;">A subsidiary of IIITDM Kancheepuram.</h4>
+		<a href="https://www.iiitdm.ac.in/" target="_blank" class="button" style="text-decoration: none;">Visit IIITDM Website</a>
+	</div>
+
+	<div class="container text-center" style="padding-bottom: 0;">
+		<h1 style="padding-top: 40px;">Vision:</h2>
+		<p>
+			DiC envisions a holistic design education that shapes the students into responsible contributors to society. It enables them to identify significant contemporary problems, inculcate critical thinking, critique conventional solutions, and challenge the status quo to arrive at creative solutions through collaborative team efforts at different levels of society and influencing policymaking that lead to innovations.
+		</p>
+		<h1>Mission:</h1>
+		<p">
+			DiC envisions a holistic design education that shapes the students into responsible contributors to society. It enables them to identify significant contemporary problems, inculcate critical thinking, critique conventional solutions, and challenge the status quo to arrive at creative solutions through collaborative team efforts at different levels of society and influencing policymaking that lead to innovations.
+		</p>
+	</div>
+
+	<div class="line-text">
+		<div class="container text-center py-4"></div>
+			<h2>News</h2>
+			<p>Corona is off the charts</p>
+		</div>
+		<div class="vline">
+			<div class="container text-center py-4">
+				<h2>Events</h2>
+				<p>Events go here</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

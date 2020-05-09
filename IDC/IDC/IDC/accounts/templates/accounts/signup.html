@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DIC</title>
+</head>
+<body>
+	<h>signup </h>
+	<form action="/signup/" method="post">
+		{% csrf_token %}
+		{{form}}
+		<input type = "submit" valur = "Signup">
+	</form>
+</body>
+</html>

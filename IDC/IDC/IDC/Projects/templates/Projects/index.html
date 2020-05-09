@@ -1,0 +1,151 @@
+{% extends "Projects/base.html" %}
+{% load static %}
+{% block title %}
+	Projects
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href='{% static "css/projectindexstyle.css" %}'>
+<script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id="page">
+
+<!--start image slider-->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
+	
+	<ul class="carousel-indicators">
+		<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+		<!--{% for i in view_name %}
+		<li data-target="#carouselExampleControls" data-slide-to="i"></li>
+		{% endfor %}-->
+	</ul>
+		
+	<!--<div class="carousel-inner">
+		{% for i in view_name %}
+			<div class="item">
+				<img src="{{i.carouselImage.url}}" height="70vh" width="100%">
+			</div>
+		{% endfor %}
+	</div>-->
+
+	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	  </a>
+</div>
+<!--end image slider-->
+
+<!--jumbotron"Project"-->
+<div class="jumbotron text-center">
+	<img src="static/images/over-line.png" class="mx-auto d-block" alt="overline" style="width: 22vw;"/>
+	<h1 class="display-4 font-weight-bold">PROJECTS</h1>
+	<img src="static/images/under-line.png" class="mx-auto d-block" alt="underline" style="width: 25vw;"/>
+
+<!--projects section-->
+	{% for project in projects %}
+		{% if not forloop.counter|divisibleby:2 %}
+			{% if forloop.counter0|divisibleby:4 %}
+			<div class="row">
+			<!-- first first line <div class="col-lg-12"><img src="static/images/linewhite.png"></div>  -->
+			{% else %}
+			<div class="row">
+			<!-- first last line <div class="col-lg-12"><img class="mx-auto d-block" src="static/images/lineblack.png"></div>  -->
+			{% endif %}
+		{% endif %}
+			<div class="col-lg-2"></div>
+			<div class="col-lg-3">
+				<div class="card-container">
+					<div class="card text-center border-dark mb-3" style="color: #000000; min-width: 18rem;">
+
+						<div class="thefront">
+							<img src="{{project.displayImage.url}}/" class="card-img-top img-fluid" alt="...">
+							<div class="card-body">
+							<h5 class="card-title">{{project.name}}</h5>
+							<p class="card-text">Led by: {{project.project_lead}}<br>{{project.departmment}}</p>
+							<div class="footer">
+								<button class="btn btn-simple" onclick="rotateCard(this)">
+									<i class="fa fa-mail-forward"></i> Quick View
+								</button>
+							</div>
+							</div>
+						</div><!--end of the front-->
+						
+						<div class="card-img-overlay">
+
+							<div class="theback">
+								<div class="main">
+								<h4 class="text-center">Sponsors and Faculty</h4>
+								<p class="card-text">
+										{{project.Sponsor.name}}
+										<img src="{{project.Sponsor.logo.url}}/"
+										</br>
+										{{project.Faculties.name}}
+								</p>
+										<div class="footer">
+											<button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+												<i class="fa fa-reply"></i> Back
+											</button>
+											<button class="btn btn-simple" rel="tooltip" title="More Info">
+												<i class="fa fa-info-circle"></i> More info
+											</button>
+										</div>
+								</div>
+						</div><!-- end of the back-->
+
+						</div><!-- end card-->
+					</div>
+				</div>
+			</div>
+			{% if forloop.counter|divisibleby:2 %}
+			<div class="col-lg-2"></div>
+			{% if forloop.counter|divisibleby:4 %}
+			<!-- second last line <div class="col-lg-12"><img src="static/images/fulllineblack.png"></div>  -->
+			{% else %}
+			<!-- second last line <div class="col-lg-12""><img src="static/images/fulllinewhite.png"></div>  -->
+			{% endif %}	
+			</div>
+			{% endif %}
+
+	<!--end projects section-->
+			</div>
+
+	{% endfor %}
+</div>
+<!--end jumbotron-->
+
+
+<!-- JS function for card flip-->
+
+<script type="text/javascript">
+	$().ready(function(){
+		$('[rel="tooltip"]').tooltip();
+
+		$('a.scroll-down').click(function(e){
+			e.preventDefault();
+			scroll_target = $(this).data('href');
+			 $('html, body').animate({
+				 scrollTop: $(scroll_target).offset().top - 60
+			 }, 1000);
+		});
+
+	});
+
+	function rotateCard(btn){
+		var $card = $(btn).closest('.card-container');
+		console.log($card);
+		if($card.hasClass('hover')){
+			$card.removeClass('hover');
+		} else {
+			$card.addClass('hover');
+		}
+	}
+
+
+<!--end function card flip-->
+{% endblock %}

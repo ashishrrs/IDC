@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>
+			{% block title %}
+			{% endblock %}
+		</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href='{% static "css/style.css" %}'>
+	</head>
+
+	<body data-spy="scroll" data-target="#navbarResponsive">
+
+	<header>
+		<!---Navigation bar -->
+		<div class="container">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			<a class="navbar-brand" href="/"><img src='{% static "images/logo_DIC.png" %}' alt="Home" style="height: 25px;"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<div class="navbar-nav mr-auto">
+						<a class="nav-item active nav-link" href="#">Projects</a>
+						<a class="nav-item nav-link" href="/clubs/">Clubs</a>
+						<a class="nav-item nav-link" href="/forms/">Forum</a>
+						<a class="nav-item nav-link" href="/FAQs/">FAQs</a>
+				</div>
+					<div class="nav navbar-nav nav-right">
+						<a class="nav-item nav-link" href="/login/"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+					</div>
+			</div>
+		</nav>
+		</div>
+	</header>
+		<!---End of Navigation bar-->
+		
+		{% block content %}
+		{% endblock %}
+
+		<footer class="py-4 bg-dark flex-shrink-0">
+			<div class="container text-center">
+				<a href="#" class="text-muted">IIITDM Kancheepuram
+					Vandalur-Kelambakkam Road,
+					Chennai: 600127.
+					 +91-44-2747 6300 |  +91-44-2747 6301
+					 office@iiitdm.ac.in</a>
+			</div>
+		</footer>
+
+	</body>
+</html>
