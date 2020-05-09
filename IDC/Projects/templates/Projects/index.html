@@ -14,7 +14,7 @@
 
 	<!--start image slider-->
 	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000" style="background-color: black;">
-		{% for i in carouselimages %}
+		{% for i in images %}
 
 		<ul class="carousel-indicators">
 			<li data-target="#carouselExampleControls" data-slide-to="i" class="active"></li>
@@ -78,7 +78,7 @@
 								<h4 class="text-center">Sponsors and Faculty</h4>
 								<p class="card-text">
 										{{project.Sponsor.name}}
-										<img src="{{project.Sponsor.logo.url}}/"
+										<img src="{{project.Sponsor.logo.url}}/">
 										</br>
 										{{project.Faculties.name}}
 								</p>

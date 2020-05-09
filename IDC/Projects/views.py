@@ -7,9 +7,11 @@ from django.views.generic.list import ListView
 
 #Create your views here.
 def index(request):
-    projects = Project.objects.all() 
+    projects = Project.objects.all()
+    carouselimg = carouselimages.objects.all() 
     context = {
         "projects": projects,
+        "images": carouselimg ,
     }
     return render(request,"Projects/index.html", context)
 # class IndexView(ListView):
@@ -27,7 +29,8 @@ def project_display(request,key):
     context = {
         "project": project,
         "faculty": project.Faculties.all(),
-        "students" : project.Students.all()
+        "students" : project.Students.all(),
+
     }   
     return render(request,"Projects/project.html",context) 
 
@@ -45,11 +48,11 @@ def project_add(request):
     }
     return render(request,"Projects/addProject.html", context)
 
-def carousel(request):
-    carouselimg = carouselimages.objects.all(),
-    context = {
-        "images": carouselimg ,
-    }
-    return render(request,"Projects/carousel.html",context)
+# def carousel(request):
+#     carouselimg = carouselimages.objects.all(),
+#     context = {
+#         "images": carouselimg ,
+#     }
+#     return render(request,"Projects/carousel.html",context)
 
 
