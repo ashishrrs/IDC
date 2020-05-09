@@ -30,6 +30,7 @@ urlpatterns = [
     path('',include('Forum.urls')),
     path('',include('FAQs.urls')),
     path('',include('Home.urls')),
+    path('',include('accounts.urls')),
 ]
 
 
