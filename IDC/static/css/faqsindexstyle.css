@@ -1,0 +1,9 @@
+/* Override bootstrap collapse to keep margins */
+.collapse.in {
+	display: inherit;
+	visibility: visible;
+  }
+  .collapse {
+	display: inherit;
+	visibility: hidden;
+  }
