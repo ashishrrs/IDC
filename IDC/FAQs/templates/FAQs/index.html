@@ -21,56 +21,67 @@
 		</header>
 		
 		<div class="py-5">
+
 			<div class="row">
-				<div class="col-lg-9 mx-auto">
+				<div class="col-lg-12 mx-auto">
 					<!-- Accordion -->
-					<div id="accordion">
-
+					<div id="accordionExample" class="accordion shadow">
+						<!-- Accordion item 1 -->
 						<div class="card">
-							<div class="card-header">
-								<a class="card-link" data-toggle="collapse" href="#collapseOne">
-									<h6>How to contact the admins?</h6>
-								</a>
+							<div id="headingOne" class="card-header bg-white shadow-sm border-0">
+								<h6 class="mb-0 font-weight-bold">
+									<a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="d-block position-relative text-dark text-uppercase collapsible-link py-2">
+										Is math related to science?
+									</a>
+								</h6>
 							</div>
-							<div id="collapseOne" class="collapse show" data-parent="#accordion">
-								<div class="card-body">
-									Goto Home/Support for contact information.
+							<div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
+								<div class="card-body p-5">
+									<p class="font-weight-light m-0">IDK, ask Katy Perry.</p>
 								</div>
 							</div>
 						</div>
-
+				
+						<!-- Accordion item 2 -->
 						<div class="card">
-							<div class="card-header">
-								<a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-									<h6>Who made this website?</h6>
-								</a>
+							<div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+								<h6 class="mb-0 font-weight-bold">
+									<a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="d-block position-relative collapsed text-dark text-uppercase collapsible-link py-2">
+										Who made this website?
+									</a>
+								</h6>
 							</div>
-							<div id="collapseTwo" class="collapse" data-parent="#accordion">
-								<div class="card-body">
-									<ul>
-										<li>Shah Anwaar Khalid: CED18I048</li>
-										<li>Ashish Choudhary: CED18I061</li>
-										<li>T Karthikeyan: CED18I065</li>
-										<li>Suyash Chaudhary: COE18B054</li>
-										<li>Shubham Karwa: COE18B062</li>
-									</ul>
+							<div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+								<div class="card-body p-5">
+									<p class="font-weight-light m-0">
+										<ul>
+											<li> Anwaar Khalid: CED18I048</li>
+											<li>Ashish Choudhary: CED18I061</li>
+											<li>T Karthikeyan: CED18I065</li>
+											<li>Suyash Chaudhary: COE18B054</li>
+											<li>Shubham Karwa: COE18B062</li>
+										</ul>
+									</p>
 								</div>
 							</div>
 						</div>
-
+				
+						<!-- Accordion item 3 -->
 						<div class="card">
-							<div class="card-header">
-								<a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-									<h6>Is Elon Musk going to name his kid X Æ A-12?</h6>
-								</a>
+							<div id="headingThree" class="card-header bg-white shadow-sm border-0">
+								<h6 class="mb-0 font-weight-bold">
+									<a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="d-block position-relative collapsed text-dark text-uppercase collapsible-link py-2">
+										Is Elon Musk going to name his kid X Æ A-12?
+									</a>
+								</h6>
 							</div>
-							<div id="collapseThree" class="collapse" data-parent="#accordion">
-								<div class="card-body">
-									He already has. None of your concern.
+							<div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+								<div class="card-body p-5">
+									<p class="font-weight-light m-0">He already has. It shouldn't be of your concern.</p>
 								</div>
 							</div>
 						</div>
-
+			
 					</div>
 				</div>
 			</div>
