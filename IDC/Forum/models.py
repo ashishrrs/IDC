@@ -1,12 +1,17 @@
 from django.db import models
 
-# Create your models here.
-class queries(models.Model):
-    name= models.CharField(max_length=100)
-    email= models.EmailField()
-    message= models.TextField(max_length=500)
-    response_message= models.TextField(max_length=500, blank=True)
-    status= models.BooleanField(default= False)
+
+class query(models.Model):
+    name = models.CharField(max_length=20)
+    email = models.EmailField(blank=True)
+    content = models.TextField(max_length=500, blank= True)
+    subject= models.CharField(max_length=30)
+
+class reply(models.Model):
+    response= models.TextField(max_length=500)
+    admin_name= models.CharField(max_length=20) 
+    query= models.ManyToManyField(query, blank= True, related_name="replies")   
+
 
 
 
