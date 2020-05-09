@@ -23,7 +23,7 @@ def index(request):
 #         return context
 
 def project_display(request,key):
-    project = Project.objects.get(id = key)
+    project = Project.objects.all()
     context = {
         "project": project,
         "faculty": project.Faculties.all(),
