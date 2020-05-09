@@ -7,7 +7,7 @@ a:hover{
 	padding-top: 56px;
 	padding-bottom: 0;
 	height: 100%;
-	font-family: 'Lato', sans-serif;;
+	font-family: 'Lato', sans-serif;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover{
@@ -39,7 +39,7 @@ a:hover{
 }
 
 /* Horizontal line */
-.collapsible-link::before {
+.collapsible-link::before{
 	content: '';
 	width: 14px;
 	height: 2px;
@@ -49,10 +49,10 @@ a:hover{
 	right: 1rem;
 	display: block;
 	transition: all 0.3s;
-  }
-  
-  /* Vertical line */
-  .collapsible-link::after {
+}
+
+/* Vertical line */
+.collapsible-link::after{
 	content: '';
 	width: 2px;
 	height: 14px;
@@ -62,12 +62,12 @@ a:hover{
 	right: calc(1rem + 6px);
 	display: block;
 	transition: all 0.3s;
-  }
-  
-  .collapsible-link[aria-expanded='true']::after {
+}
+
+.collapsible-link[aria-expanded='true']::after{
 	transform: rotate(90deg) translateX(-1px);
-  }
-  
-  .collapsible-link[aria-expanded='true']::before {
+}
+
+.collapsible-link[aria-expanded='true']::before{
 	transform: rotate(180deg);
-  }
+}
