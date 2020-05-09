@@ -1,22 +1,29 @@
+{% extends "accounts/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-	<title>DIC</title>
-</head>
-<body>
-	<h>login </h>
-	<form action="/login/" method="post">
-		{% csrf_token %}
-		{{form}}
-		{%if request.GET.next %}
-			<input type ="hidden" name ="next" value="{{request.GET.next}}">
-		{% endif %}
-		<input type = "submit" valur = "Login">
-	</form>
-	<div>
-		<br><br>
-		<a href="/signup/" >New user? Do not have a id</a>
+{% block title %}
+	Login
+{% endblock %}
 
-</body>
-</html>
+{% block content %}
+<link rel="stylesheet" href='{% static "css/loginstyle.css" %}'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id="page">
+	<div class="container text-center py-6">
+		<h>login </h>
+		<form action="/login/" method="post">
+			{% csrf_token %}
+				{{form}}
+					{%if request.GET.next %}
+						<input type ="hidden" name ="next" value="{{request.GET.next}}">
+					{% endif %}
+				<input type = "submit" valur = "Login">
+		</form>
+		<div class="row py-3">
+			<div class="d-flex justify-content-center">
+				<a href="/signup/">New user? Sign up.</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
