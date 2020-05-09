@@ -28,9 +28,10 @@ def project_display(request,key):
     project = Project.objects.all()
     context = {
         "project": project,
-        "faculty": project.Faculties.all(),
+        "faculties": project.Faculties.all(),
         "students" : project.Students.all(),
-
+        "sponsors" : project.Sponsor.all(),
+        "images" : project.Image.all()
     }   
     return render(request,"Projects/project.html",context) 
 
