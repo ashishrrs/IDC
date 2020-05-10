@@ -102,13 +102,20 @@
 												<div class="content">
 													<div class="main">
 														<h4 class="text-center">Sponsors</h4>
+														{% for sponsors in project.Sponsor.all %}
+														
+		
 														<p class="card-text text-center">
-															{{project.Sponsor.name}}
-															<img src="{{project.Sponsor.logo.url}}" style="width: 100px; height: 100px;">
+															{{sponsors.name}}
+															<img src="{{sponsors.logo.url}}/" style="width: 100px; height: 100px;">
 														</p>
+														{% endfor %}
+														{% for fac in project.Faculties.all %}
 														<p class="card-text text-center">
-															{{project.Faculties.name}}
+															{{fac.name}}
 														</p>
+														{% endfor %}
+
 													</div>
 													<button class="btn btn-simple" rel="tooltip" title="Visit Page">
 														<a href="#" style="text-decoration: none;">
