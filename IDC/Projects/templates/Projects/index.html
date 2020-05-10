@@ -6,9 +6,13 @@
 
 {% block content %}
 
-<link rel="stylesheet" href='{% static "css/projectindexstyle.css" %}'>
+<link rel="stylesheet" href="{% static 'css/projectindexstyle.css' %}">
 <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='{% static "js/card-flip.js" %}' type ="text/javascript"></script>
+<script src='{% static "js/jquery-1.10.2.js" %}' type="text/javascript"></script>
+<script src='{% static "js/bootstrap.min.js" %}' type="text/javascript"></script>
+
 
 <div id="page">
 
@@ -50,84 +54,138 @@
 
 	<div class="container py-5 text-center">
 		<h1 class="display-4 font-weight-bold">PROJECTS</h1>
+	</div>
 
 	<!--projects section-->
+	<div class="container py-5">
 		{% for project in projects %}
-		
-			<div class="col-lg-3">
-				<div class="card-deck">
-					<div class="card text-center border-dark mb-3">
+			{% if forloop.counter0|divisibleby:2 %}
+				<div class="row py-5">
+					<div class="col-5">
+						<!--right card-->
+							<!--start of the card-->
+							<div class="col-md-4 col-sm-6">
+								<div class="card-container manual-flip">
+									<div class="card text-center border-dark">
 
-						<div class="thefront">
-							<img src="{{project.displayImage.url}}/" class="card-img-top img-fluid" alt="...">
-							<div class="card-body">
-							<h5 class="card-title">{{project.name}}</h5>
-							<p class="card-text">Led by: {{project.project_lead}}<br>{{project.departmment}}</p>
-							<div class="card-footer">
-								<button class="btn btn-simple" onclick="rotateCard(this)">
-									<i class="fa fa-mail-forward"></i> Quick View
-								</button>
-							</div>
-							</div>
-						</div><!--end of the front-->
-						
-						<div class="card-img-overlay">
+										<!--start of the front-->
+										<div class="front">
+											<img src="{{project.displayImage.url}}/" class="card-img-top img-fluid" alt="...">
+												<div class="card-body">
+													<h5 class="card-title">{{project.name}}</h5>
+													<p class="card-text">Led by: {{project.project_lead}}<br>{{project.departmment}}</p>
 
-							<div class="theback">
-								<div class="main">
-								<h4 class="text-center">Sponsors and Faculty</h4>
-								<p class="card-text">
-										{{project.Sponsor.name}}
-										<img src="{{project.Sponsor.logo.url}}/">
-										</br>
-										{{project.Faculties.name}}
-								</p>
-										<div class="card-footer">
-											<button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
-												<i class="fa fa-reply"></i> Back
-											</button>
-											<button class="btn btn-simple" rel="tooltip" title="More Info">
-												<i class="fa fa-info-circle"></i> More info
-											</button>
+														<div class="footer">
+															<button class="btn btn-simple" rel="tooltip" title="Info" onclick="rotateCard(this)">
+																<i class="fa fa-mail-forward"></i> Quick View
+															</button>
+														</div>
+												</div>
 										</div>
-								</div>
-							</div><!-- end of the back-->
-						</div>
-					</div><!-- end card-->
-				</div>
-			</div>
+										<!--end of the front-->
 
-		<!--end projects section-->
+										<!--start of the back-->
+										<div class="card-img-overlay">
+											<div class="back">
+												<div class="header">
+													<h4 class="text-center">More Information</h4>
+												</div>
+												<div class="content">
+													<div class="main">
+														<h4 class="text-center">Sponsors</h4>
+														<p class="card-text text-center">
+															{{project.Sponsor.name}}
+															<img src="{{project.Sponsor.logo.url}}" style="width: 100px; height: 100px;">
+														</p>
+														<p class="card-text text-center">
+															{{project.Faculties.name}}
+														</p>
+													</div>
+													<button class="btn btn-simple" rel="tooltip" title="Visit Page">
+														<i class="fa fa-info-circle"></i> More info
+													</button>
+												</div>
+												<div class="footer">
+													<button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+														<i class="fa fa-reply"></i> Back
+													</button>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- end of the back-->
+
+							</div>
+							<!-- end card-->
+						<!--End right card-->
+					</div>
+					<div class="col-2"><!--Empty column for spacing--></div>
+			{% else %}
+					<div class="col-4">
+						<!--left card-->
+							<!--start of the card-->
+							<div class="col-md-4 col-sm-6">
+								<div class="card-container manual-flip">
+									<div class="card text-center border-dark">
+
+										<!--start of the front-->
+										<div class="front">
+											<img src="{{project.displayImage.url}}/" class="card-img-top img-fluid" alt="...">
+												<div class="card-body">
+													<h5 class="card-title">{{project.name}}</h5>
+													<p class="card-text">Led by: {{project.project_lead}}<br>{{project.departmment}}</p>
+
+														<div class="footer">
+															<button class="btn btn-simple" rel="tooltip" title="Info" onclick="rotateCard(this)">
+																<i class="fa fa-mail-forward"></i> Quick View
+															</button>
+														</div>
+												</div>
+										</div>
+										<!--end of the front-->
+
+										<!--start of the back-->
+										<div class="card-img-overlay">
+											<div class="back">
+												<div class="header">
+													<h4 class="text-center">More Information</h4>
+												</div>
+												<div class="content">
+													<div class="main">
+														<h4 class="text-center">Sponsors</h4>
+														<p class="card-text text-center">
+															{{project.Sponsor.name}}
+															<img src="{{project.Sponsor.logo.url}}/" style="width: 100px; height: 100px;">
+														</p>
+														<p class="card-text text-center">
+															{{project.Faculties.name}}
+														</p>
+													</div>
+													<button class="btn btn-simple" rel="tooltip" title="Visit Page">
+														<i class="fa fa-info-circle"></i> More info
+													</button>
+												</div>
+												<div class="footer">
+													<button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+														<i class="fa fa-reply"></i> Back
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- end of the back-->
+
+							</div>
+								<!-- end card-->
+						<!--End left card-->
+					</div>
+				</div>
+			{% endif %}
 		{% endfor %}
 	</div>
+	<!--end projects section-->
 </div>
 {% endblock %}
-
-<!-- JS function for card flip-->
-
-<script type="text/javascript">
-	$().ready(function(){
-		$('[rel="tooltip"]').tooltip();
-
-		$('a.scroll-down').click(function(e){
-			e.preventDefault();
-			scroll_target = $(this).data('href');
-			 $('html, body').animate({
-				 scrollTop: $(scroll_target).offset().top - 60
-			 }, 1000);
-		});
-
-	});
-
-	function rotateCard(btn){
-		var $card = $(btn).closest('.card-container');
-		console.log($card);
-		if($card.hasClass('hover')){
-			$card.removeClass('hover');
-		} else {
-			$card.addClass('hover');
-		}
-	}
-</script>
-
-<!--end function card flip-->
