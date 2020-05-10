@@ -39,9 +39,16 @@
 										<a class="nav-item nav-link" href="/FAQs/">FAQs</a>	
 								</div>
 
+
+							{% if user.is_authenticated %}
+								<div class="nav navbar-nav ml-auto nav-right">
+									<a class="nav-item nav-link" href="/logout/"><span class="glyphicon glyphicon-log-in"></span>Logout</a>
+								</div>
+								{% else %}
 								<div class="nav navbar-nav ml-auto nav-right">
 									<a class="nav-item nav-link" href="/login/"><span class="glyphicon glyphicon-log-in"></span>Login</a>
 								</div>
+								{% endif %}	
 							</div>
 						</div>
 					</nav>
