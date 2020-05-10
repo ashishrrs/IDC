@@ -31,19 +31,19 @@
 .feature-box{
 	background-color: #666699;
 	height: 100%;
-	width: 90%;
-	padding: 0 12px 0 12px;
 	border-radius: 20px;
 }
+
 .feature-details h4{
 	text-align: center;
 }
+
 .feature-box i{
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	font-size: 48px;
-	margin-left: 40%;
+
 }
 
 .jumbotron{
@@ -63,4 +63,9 @@ ul li{
 	padding: 5px;
 	border-radius: 15px;
 	color: black;
+}
+
+.fa{
+	position: relative;
+
 }
