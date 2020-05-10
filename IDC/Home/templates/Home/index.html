@@ -10,30 +10,63 @@
 
 
 <div id="page">
+	<section class="py-3 header text-center" style="margin-left: 0; background-image: url('static/images/campus.png');background-size: cover; background-repeat: no-repeat; margin-left: 0; margin-right: 0; padding-right: 0; padding-left: 0;">
+			<header class="py-3">
+					<img src=static/images/logo.png style="filter: drop-shadow(8px 8px 8px #222222);">
+			</header>
+	</section>
 
-	<div class="container-fluid text-center" style="margin-left: 0; background-image: url('static/images/campus.png'); background-size: cover; background-repeat: no-repeat;">
-		<div class="container py-5" style="text-shadow: 1px 1px 8px #000000;">
-			<img src=static/images/logo.png style="filter: drop-shadow(8px 8px 8px #222222);">
-			<h1 class="display-1 font-weight-bold text-center">DIC</h1>
+				<header class="header sticky-top">
+					<!---Navigation bar -->
+					<nav class="navbar navbar-custom navbar-expand-md navbar-dark">
+						<a class="navbar-brand" href="/">
+							<img src='{% static "images/logo_DIC_active.png" %}' alt="Home" style="height: 25px;">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+			
+						<div class="collapse navbar-collapse" id="navbarResponsive">
+							<div class="navbar-nav mX-auto">
+									<a class="nav-item nav-link" href="/projects/">Projects</a>
+									<a class="nav-item nav-link" href="/clubs/">Clubs</a>
+									<a class="nav-item nav-link" href="/forms/">Forum</a>
+									<a class="nav-item nav-link" href="/FAQs/">FAQs</a>	
+							</div>
+								<div class="nav navbar-nav ml-auto nav-right">
+									<a class="nav-item nav-link" href="/login/"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+								</div>
+						</div>
+					</nav>
+				</header>
+					<!---End of Navigation bar-->
+
+			<div class="jumbotron-fluid text-center" style="background-image: linear-gradient(to top,#000000, #434343);">
+				<div class="container text-center py-3" style="padding-bottom: 0;">
+					<img src="static/images/logo_DIC_active.png" style="width: 40vh; padding-top: 50px;">
+				</div>
+				<h2 style="text-shadow: 2px 2px 8px #000000;">Design & Innovation Center</h2>
+				<h4 style="text-shadow: 2px 2px 8px #000000;">A subsidiary of IIITDM Kancheepuram.</h4>
+				<a href="https://www.iiitdm.ac.in/" target="_blank" class="button" style="text-decoration: none;">Visit IIITDM Website</a>
+			</div>
 		</div>
-		
-		<h2 style="text-shadow: 2px 2px 8px #000000;">Design & Innovation Center</h2>
-		<h4 style="text-shadow: 2px 2px 8px #000000;">A subsidiary of IIITDM Kancheepuram.</h4>
-		<a href="https://www.iiitdm.ac.in/" target="_blank" class="button" style="text-decoration: none;">Visit IIITDM Website</a>
-	</div>
-
-	<div class="container text-center" style="padding-bottom: 0;">
-		<h1 style="padding-top: 40px;">Vision:</h2>
-		<p>
-			DiC envisions a holistic design education that shapes the students into responsible contributors to society. It enables them to identify significant contemporary problems, inculcate critical thinking, critique conventional solutions, and challenge the status quo to arrive at creative solutions through collaborative team efforts at different levels of society and influencing policymaking that lead to innovations.
-		</p>
-		<h1>Mission:</h1>
-		<p">
-			DiC envisions a holistic design education that shapes the students into responsible contributors to society. It enables them to identify significant contemporary problems, inculcate critical thinking, critique conventional solutions, and challenge the status quo to arrive at creative solutions through collaborative team efforts at different levels of society and influencing policymaking that lead to innovations.
-		</p>
-	</div>
+	<!--end head image-->
 
 	<div class="jumbotron text-center">
+
+		<div class="container text-center" style="padding-bottom: 0;">
+			<h1 class="font-weight-bold" style="padding-top: 40px;">VISION</h2>
+			<p>
+				DiC envisions a holistic design education that shapes the students into responsible contributors to society. It enables them to identify significant contemporary problems, inculcate critical thinking, critique conventional solutions, and challenge the status quo to arrive at creative solutions through collaborative team efforts at different levels of society and influencing policymaking that lead to innovations.
+			</p>
+			<h1 class="font-weight-bold">MISSION</h1>
+			<p">
+				DiC envisions a holistic design education that shapes the students into responsible contributors to society. It enables them to identify significant contemporary problems, inculcate critical thinking, critique conventional solutions, and challenge the status quo to arrive at creative solutions through collaborative team efforts at different levels of society and influencing policymaking that lead to innovations.
+			</p>
+	
+			<hr style="border: 4px solid #ffffff;margin-block-start: 2rem;">
+		</div>
+
 		<section class="announcements">
 			<div class="container">
 				<div class="row">
@@ -43,7 +76,8 @@
 							<div class="feature-details">
 								<h4>Announcements</h4>
 								<ul class="arrow">
-									<li> " SANDBOX and Startup Sandbox Women Entrepreneurship Program" on 2nd Dec 2019 - 20th Dec 2019, Organized by MaDeIT</li>
+									<li>New DIC logo has been launched.</li>
+									<li>"SANDBOX and Startup Sandbox Women Entrepreneurship Program" on 2nd Dec 2019 - 20th Dec 2019, Organized by MaDeIT</li>
 									<li>Singapore AUV Challenge is open for registration.</li>
 									<li>Epoch Results are out !!!</li>
 								</ul>

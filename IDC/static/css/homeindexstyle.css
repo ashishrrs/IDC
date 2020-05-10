@@ -1,6 +1,6 @@
 #page{
-	background: linear-gradient(to right, #0f0c29, #302b63, #24243e); padding-top: 56px; padding-bottom: 0;
-	padding-top: 56px;
+	background: linear-gradient(to right, #0f0c29, #302b63, #24243e); padding-bottom: 0;
+
 	padding-bottom: 0;
 }
 
@@ -14,7 +14,7 @@
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
-	margin: 4px 2px;
+	margin: 15px 15px;
 	transition-duration: 0.4s;
 	cursor: pointer;
 	border-radius: 5px;
@@ -29,7 +29,8 @@
 	margin-top: 30px;
 }
 .feature-box{
-	background-color: #000000;
+	background-color: #666699;
+	height: 100%;
 	width: 90%;
 	padding: 0 12px 0 12px;
 	border-radius: 20px;
