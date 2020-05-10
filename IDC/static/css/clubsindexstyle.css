@@ -29,7 +29,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	transition: all 0.3s;
+	transition: all 0.4s;
 }
 
 .hover-content{
@@ -45,7 +45,7 @@
 }
 
 .hover-4 .hover-overlay{
-	background: rgba(0, 0, 0, 0.3);
+	background: rgba(0, 0, 0, 0.15);
 	z-index: 90;
 }
 
@@ -110,6 +110,6 @@
 .fa:hover{
 	text-decoration: none;
 	color: #fff;
-	background: #4d4d4d;
+	background: #262626;
 	z-index: 1;
 }
