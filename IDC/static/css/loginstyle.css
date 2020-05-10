@@ -5,3 +5,10 @@
 	height: 100%;
 	color: black;
 }
+
+.card{
+	margin-top: 50px;
+}
+.card-title{
+	padding-top: 40px;
+}
