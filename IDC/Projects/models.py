@@ -43,6 +43,9 @@ class Image(models.Model):
 
 	projects = models.ManyToManyField(Project, blank = True, related_name="Image")
 
+	def __str__(self):
+		return f"{self.image}"
+
 class carouselimages(models.Model):
 	carouselimage =  models.ImageField(default = "defaultProject.png",upload_to="images/carousel",blank = False)
 	carouseltitle = models.CharField(max_length = 100,null = False)
@@ -51,8 +54,6 @@ class carouselimages(models.Model):
 	def __str__(self):
 		return self.carouseltitle
 
-	
-	
 
 class Sponsor(models.Model):
 	name = models.CharField(max_length = 100)

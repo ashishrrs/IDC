@@ -48,12 +48,3 @@ def project_add(request):
         "form": form
     }
     return render(request,"Projects/addProject.html", context)
-
-# def carousel(request):
-#     carouselimg = carouselimages.objects.all(),
-#     context = {
-#         "images": carouselimg ,
-#     }
-#     return render(request,"Projects/carousel.html",context)
-
-

@@ -123,7 +123,7 @@ Project
         {% for image in images %}
             <div class="col-xs-12 col-md-6 col-lg-4" style="margin-bottom: 12px; height: 30vh;">
                 <a href="{{image.url}}/">
-                    <img src="https://html.com/wp-content/uploads/html-hpg-featured-new.png" class="img-fluid" style="height: 100%!important;">
+                    <img src="{{image.image.url}}" class="img-fluid" style="height: 100%!important;">
                 </a>
             </div>
         {% endfor %}
