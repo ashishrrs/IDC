@@ -97,25 +97,32 @@
 										<div class="card-img-overlay">
 											<div class="back">
 												<div class="header">
-													<h4 class="text-center">More Information</h4>
+													<h4 class="text-center">{{project.name}}</h4>
 												</div>
+
 												<div class="content">
 													<div class="main">
-														<h4 class="text-center">Sponsors</h4>
-														{% for sponsors in project.Sponsor.all %}
-														
-		
-														<p class="card-text text-center">
-															{{sponsors.name}}
-															<img src="{{sponsors.logo.url}}/" style="width: 100px; height: 100px;">
-														</p>
-														{% endfor %}
-														{% for fac in project.Faculties.all %}
-														<p class="card-text text-center">
-															{{fac.name}}
-														</p>
-														{% endfor %}
-
+														<div class="text-center">
+															<p>
+																<h4>Sponsors</h4>
+																<ul id="sponsors">
+																{% for sponsors in project.Sponsor.all %}
+																	<li>
+																		{{sponsors.name}}
+																		<img src="{{sponsors.logo.url}}/" style="width: 25px; height: 25px;">
+																	</li>
+																{% endfor %}
+																</ul>
+															</p>
+															<p>
+																<h4>Faculty</h4>
+																<ul>
+																	{% for fac in project.Faculties.all %}
+																		<li>{{fac.name}}</li>
+																	{% endfor %}
+																</ul>
+															</p>
+														</div>
 													</div>
 													<button class="btn btn-simple" rel="tooltip" title="Visit Page">
 														<a href="#" style="text-decoration: none;">
@@ -123,6 +130,7 @@
 														</a>
 													</button>
 												</div>
+
 												<div class="footer">
 													<button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
 														<i class="fa fa-reply"></i> Back
@@ -168,18 +176,32 @@
 											<div class="back">
 												<div class="card-text">
 													<div class="header">
-														<h4 class="text-center">More Information</h4>
+														<h4 class="text-center">{{project.name}}</h4>
 													</div>
+
 													<div class="content">
 														<div class="main">
-															<h4 class="text-center">Sponsors</h4>
-															<p class="card-text text-center">
-																{{project.Sponsor.name}}
-																<img src="{{project.Sponsor.logo.url}}/" style="width: 100px; height: 100px;">
-															</p>
-															<p class="card-text text-center">
-																{{project.Faculties.name}}
-															</p>
+															<div class="text-center">
+																<p>
+																	<h4>Sponsors</h4>
+																	<ul id="sponsors">
+																	{% for sponsors in project.Sponsor.all %}
+																		<li>
+																			{{sponsors.name}}
+																			<img src="{{sponsors.logo.url}}/" style="width: 25px; height: 25px;">
+																		</li>
+																	{% endfor %}
+																	</ul>
+																</p>
+																<p>
+																	<h4>Faculty</h4>
+																	<ul>
+																		{% for fac in project.Faculties.all %}
+																			<li>{{fac.name}}</li>
+																		{% endfor %}
+																	</ul>
+																</p>
+															</div>
 														</div>
 														<button class="btn btn-simple" rel="tooltip" title="Visit Page">
 															<a href="#" style="text-decoration: none;">
@@ -187,8 +209,9 @@
 															</a>
 														</button>
 													</div>
+
 													<div class="footer">
-														<button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+														<button class="btn btn-simple" id="back" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
 															<i class="fa fa-reply"></i> Back
 														</button>
 													</div>

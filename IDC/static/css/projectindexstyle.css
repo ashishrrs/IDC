@@ -7,16 +7,24 @@
 }
 
 .carousel-inner{
+	width: auto;
 	height: 78vh;
+	max-height: 78vh;
 }
 
 .carousel-item{
+	max-height: 78vh;
 	object-fit: cover;
 }
 
+ul#sponsors li{
+	display: inline;
+}
+
 .card-img-top{
-	width: 100%;
+	width: auto;
 	height: 20vw;
+	max-height: 20vw;
 	object-fit: cover;
 }
 
@@ -35,7 +43,7 @@
 /* flip the pane when hovered */
 .card-container:not(.manual-flip):hover .card,
 .card-container.hover.manual-flip .card{
-	transform: rotateY( 180deg );
+	transform: rotateY(180deg);
 }
 
 .card-container.static:hover .card,
@@ -70,7 +78,7 @@
 
 /* back, initially hidden pane */
 .back {
-	transform: rotateY( 180deg );
+	transform: rotateY(180deg);
 	z-index: 1;
 }
 
@@ -82,7 +90,7 @@
 
 /*        Style       */
 
-.card-container, .front, .back {
+.card-container, .front, .back{
 	border-radius: 4px;
 }
 
@@ -90,10 +98,6 @@
 	background-color: rgba(0, 0, 0, 0);
 	box-shadow: none;
 	padding: 10px 20px 20px;
-}
-
-.card .content .main {
-	min-height: 160px;
 }
 
 .card h5{
@@ -105,18 +109,16 @@
 .card .footer {
 	border-top: 1px solid #EEEEEE;
 	color: #999999;
-	margin: 30px 0 0;
+	margin: 0 2px 0;
 	padding: 10px 0 0;
 	text-align: center;
+
 }
+
+
 
 .card .footer .btn-simple{
 	margin-top: -6px;
-}
-
-.card .header {
-	padding: 15px 20px;
-	height: 90px;
 }
 
 .btn-simple{
