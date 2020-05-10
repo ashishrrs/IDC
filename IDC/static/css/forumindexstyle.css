@@ -33,9 +33,7 @@
 
 .table-fixed thead,
 .table-fixed tbody,
-.table-fixed tr,
-.table-fixed td,
-.table-fixed th {
+.table-fixed tr,{
 	display: block;
 }
 
