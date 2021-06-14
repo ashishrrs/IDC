@@ -5,7 +5,6 @@
 * [Functionalities](#functionalities)
 * [Technologies](#technologies)
 * [Visit the web app](#visit-the-web-app)
-* [Contact developer](#contact-developer)
 
 ### General info
 DIC webapp is a full fledged Design Innovation center web application powered by django framework of python. It has most of the functionalities one would expect from an DIC website.
