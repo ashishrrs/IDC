@@ -25,7 +25,7 @@ SECRET_KEY = 'i$lc)cfm)=2#s(d(-drns2^s0+!u*4-2*-w)qm4ul+!vz_*k+e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['secure-dawn-26330.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = []
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS= True
@@ -134,6 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 MEDIA_URL = '/media/'
 
