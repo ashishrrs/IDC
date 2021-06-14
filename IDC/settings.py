@@ -25,7 +25,7 @@ SECRET_KEY = 'i$lc)cfm)=2#s(d(-drns2^s0+!u*4-2*-w)qm4ul+!vz_*k+e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['secure-dawn-26330.herokuapp.com','0.0.0.0']
+ALLOWED_HOSTS = ['secure-dawn-26330.herokuapp.com','127.0.0.1']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS= True
